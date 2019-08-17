@@ -20,7 +20,6 @@ class Post extends Model
                         $newPost[$key] = $post[$key];
                     }
                     $newPost->save();
-
                     return true;
                 });
 
@@ -35,6 +34,25 @@ class Post extends Model
     public static function showPost($id)
     {
         return self::where('id', $id)->first();
+    }
+
+    public static function updatePost($id, $post)
+    {
+        $isSaved = DB::transaction(function () use ($id, $post) {
+            $oldPost = self::find($id);
+            foreach ($post as $key => $value) {
+                $oldPost[$key] = $post[$key];
+            }
+
+            $oldPost->save();
+            return true;
+        });
+
+        if ($isSaved) {
+            return response()->json(['message' => 'success', 'status' => 200]);
+        } else {
+            return response()->json(['message' => 'failed', 'status' => 401]);
+        }
     }
 
     public static function deletePost($id)
