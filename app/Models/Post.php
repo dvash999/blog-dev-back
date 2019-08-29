@@ -58,7 +58,13 @@ class Post extends Model
     public static function deletePost($id)
     {
         $postToDelete = self::find($id);
-        return $postToDelete->delete() ? 'deleted successfully' : 'failed';
+        $wasDeleted = $postToDelete->delete();
+
+        if ($wasDeleted) {
+            return response()->json(['message' => 'success', 'status' => 200]);
+        } else {
+            return response()->json(['message' => 'failed', 'status' => 401]);
+        }
     }
 
 
