@@ -42,6 +42,6 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        //
+        return Post::deletePost($id);
     }
 }
