@@ -14,5 +14,5 @@ use app\Http\Controllers\PostController;
 |
 */
 
-Route::resource('posts',                         'PostController');
+Route::resource('posts', 'PostController', ['except' => ['create', 'edit']]);
 

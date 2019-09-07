@@ -14,12 +14,6 @@ class PostController extends Controller
     }
 
 
-    public function create()
-    {
-        dd('create');
-    }
-
-
     public function store(Request $request)
     {
         return Post::storePost($request->post());
@@ -30,10 +24,6 @@ class PostController extends Controller
         return Post::showPost($id);
     }
 
-    public function edit($id)
-    {
-        dd($id);
-    }
 
     public function update(Request $request, $id)
     {
