@@ -1,16 +1,23 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use  App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
+
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+
+        User::truncate();
+        Post::truncate();
+
+        $userQuantity = 200;
+        $postQuantity = 10;
+
+        factory(User::class, $userQuantity)->create();
+        factory(User::class, $postQuantity);
     }
 }
