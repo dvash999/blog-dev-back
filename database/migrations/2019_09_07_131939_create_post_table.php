@@ -10,11 +10,11 @@ class CreatePostTable extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
             $table->string('author');
             $table->string('title');
             $table->string('content');
             $table->date('date');
+            $table->timestamps();
         });
     }
     public function down()

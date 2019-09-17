@@ -21,6 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password', 'verified', 'verification_token', 'admin'
     ];
 
+//    protected $table = 'users';
 
     protected $hidden = [
         'password', 'remember_token', 'verification', 'verification_token', 'admin'
