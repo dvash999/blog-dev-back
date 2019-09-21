@@ -3,35 +3,72 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 use App\Models\Post;
 
-class PostController extends Controller
+class PostController extends ApiController
 {
     public function index()
     {
-        return Post::getAllPosts();
+        $post = Post::all();
+        return $this->showAll($post);
     }
 
 
     public function store(Request $request)
     {
-        return Post::storePost($request->post());
+        $rules = [
+            'author' => 'required',
+            'title' => 'required',
+            'content' => 'required',
+            'date' => 'date',
+        ];
+
+        $this->verified($request, $rules);
+
+        $data = $request->all();
+        $post = $data->create();
+
+        return $this->showOne($post);
     }
 
     public function show($id)
     {
-        return Post::showPost($id);
+        $post = Post::findOrFail($id);
+        return $this->showOne($post);
     }
 
 
     public function update(Request $request, $id)
     {
-       return Post::updatePost($id, $request->all());
+        $post = Post::findOrFail($id);
+
+        $rules = [
+            'author' => 'required',
+            'title' => 'required',
+            'content' => 'required',
+            'date' => 'date',
+        ];
+
+        $this->validate($request, $rules);
+        $newPostData = $request->post();
+
+        foreach($newPostData as $key => $value) {
+            if (!$value) {
+                $this->errorResponse('cant accept empty values', 401);
+            }
+            $post[$key] = $value;
+        }
+
+        $post->save();
+
+        return $this->showOne($post);
     }
 
     public function destroy($id)
     {
-        return Post::deletePost($id);
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return $this->showOne($post);
     }
 }
