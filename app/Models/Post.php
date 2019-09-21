@@ -7,11 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
-    public static function getAllPosts()
-    {
-        return self::all();
-    }
-
     public static function storePost($post)
     {
         $isSaved = DB::transaction(function () use ($post) {
@@ -22,13 +17,7 @@ class Post extends Model
                     $newPost->save();
                     return true;
                 });
-
-        if ($isSaved) {
-            return response()->json(['message' => 'success', 'status' => 200]);
-        } else {
-            return response()->json(['message' => 'failed', 'status' => 401]);
-        }
-
+            return response()->json(['message' => $isSaved ? 'success' : 'failed', 'status' => $isSaved ? 200 : 401]);
     }
 
     public static function showPost($id)
