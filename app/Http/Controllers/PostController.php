@@ -31,17 +31,14 @@ class PostController extends ApiController
         return $this->showOne($post);
     }
 
-    public function show($id)
+    public function show(Post $post)
     {
-        $post = Post::findOrFail($id);
         return $this->showOne($post);
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        $post = Post::findOrFail($id);
-
         $rules = [
             'author' => 'required',
             'title' => 'required',
@@ -64,9 +61,8 @@ class PostController extends ApiController
         return $this->showOne($post);
     }
 
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        $post = Post::findOrFail($id);
         $post->delete();
 
         return $this->showOne($post);

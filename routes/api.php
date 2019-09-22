@@ -14,6 +14,6 @@ use app\Http\Controllers\PostController;
 |
 */
 
-Route::resource('admin/manage-posts', 'PostController', ['except' => ['create', 'edit']]);
-Route::resource('admin/manage-users', 'UserController');
+Route::resource('admin/posts', 'PostController', ['except' => ['create', 'edit']]);
+Route::resource('admin/users', 'UserController', ['except' => ['create', 'edit']]);
 
