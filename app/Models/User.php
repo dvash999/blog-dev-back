@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Transformers\UserTransformer;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -17,6 +18,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     const ADMIN_USER = 'true';
     const REGULAR_USER = 'false';
+
+    public $transformer = UserTransformer::class;
+    protected $table = 'users';
+    protected  $dates = ['deleted_at'];
 
     protected $fillable = [
         'name', 'email', 'password', 'verified', 'verification_token', 'admin'
