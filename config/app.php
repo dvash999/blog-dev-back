@@ -1,5 +1,8 @@
 <?php
 
+use Laravel\Passport\PassportServiceProvider;
+use Laravel\Tinker\TinkerServiceProvider;
+
 return [
 
     /*
@@ -165,6 +168,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Passport\PassportServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
         Spatie\Fractal\FractalServiceProvider::class,
 
