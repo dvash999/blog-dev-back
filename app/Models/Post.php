@@ -9,15 +9,8 @@ class Post extends Model
 {
     public static function storePost($post)
     {
-//        $isSaved = DB::transaction(function () use ($post) {
-//                    $newPost = new Post;
-//                    foreach ($post as $key => $value) {
-//                        $newPost[$key] = $post[$key];
-//                    }
-//                    $newPost->save();
-//                    return true;
-//                });
-//            return response()->json(['message' => $isSaved ? 'success' : 'failed', 'status' => $isSaved ? 200 : 401]);
+        $post = new self($post);
+        $post->save();
     }
 
     public static function showPost($id)

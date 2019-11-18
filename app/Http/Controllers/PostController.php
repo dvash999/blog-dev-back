@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -23,12 +24,18 @@ class PostController extends ApiController
             'date' => 'date',
         ];
 
-        $this->verified($request, $rules);
+        $this->validate($request, $rules);
+        $post = $request->all();
 
-        $data = $request->all();
-        $post = $data->create();
+        try {
+            Post::storePost($post);
+        } catch (\Exception $e) {
+            return $e;
+        }
 
-        return $this->showOne($post);
+        //return response()->json(['message' => $isSaved ? 'success' : 'failed', 'status' => $isSaved ? 200 : 401]);
+
+        return Response(['status' => 200, 'message' => 'Post saved!']);
     }
 
     public function show(Post $post)
