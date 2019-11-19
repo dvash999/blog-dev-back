@@ -10,8 +10,7 @@ class PostController extends ApiController
 {
     public function index()
     {
-        $post = Post::all();
-        return $this->showAll($post);
+        return Post::getAllPosts();
     }
 
 
@@ -32,8 +31,6 @@ class PostController extends ApiController
         } catch (\Exception $e) {
             return $e;
         }
-
-        //return response()->json(['message' => $isSaved ? 'success' : 'failed', 'status' => $isSaved ? 200 : 401]);
 
         return Response(['status' => 200, 'message' => 'Post saved!']);
     }

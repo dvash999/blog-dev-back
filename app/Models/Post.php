@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
+    protected $fillable = ['title', 'author', 'content' ];
+
+    public static function getAllPosts()
+    {
+        return Post::all();
+    }
+
     public static function storePost($post)
     {
         $post = new self($post);
