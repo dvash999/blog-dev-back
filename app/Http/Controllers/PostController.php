@@ -10,7 +10,9 @@ class PostController extends ApiController
 {
     public function index()
     {
-        return Post::getAllPosts();
+        $posts = Post::getAllPosts();
+
+        return $this->showAll($posts);
     }
 
 
@@ -32,7 +34,7 @@ class PostController extends ApiController
             return $e;
         }
 
-        return Response(['status' => 200, 'message' => 'Post saved!']);
+        return Response(['status' => 200, 'message' => 'PostTransformer saved!']);
     }
 
     public function show(Post $post)

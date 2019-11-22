@@ -7,12 +7,12 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class UserController extends ApiController
+class ManageUsersController extends ApiController
 {
     public function index()
     {
-        return User::all();
-//        return $this->showAll($users);
+         return User::all();
+//        return $this->showAll();
     }
 
     public function create()

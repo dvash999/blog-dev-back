@@ -16,6 +16,7 @@ class SignupMiddleWare
     public function handle($request, Closure $next, $headerName = 'X-Name')
     {
         $response = $next($request);
+//        $response->headers('Content-Security-Policy': font-src 'self' data:);
         $response->headers->set($headerName, config('app.name'));
 
         return $response;

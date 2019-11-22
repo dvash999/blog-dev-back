@@ -26,7 +26,9 @@ trait ApiResponder
             return $this->successResponse($collection, $code);
         }
 
+        return $collection;
         $transformer = $collection->first()->transformer;
+
         $collection = $this->sortData($collection);
         $collection = $this->paginate($collection);
         $collection = $this->transformData($collection, $transformer);
@@ -87,7 +89,9 @@ trait ApiResponder
 
     protected function transformData($data, $transformer)
     {
+        dd($data, $transformer);
         $transformation = fractal($data, new $transformer);
+
 
         return $transformation->toArray();
     }
