@@ -69,8 +69,8 @@ class PostController extends ApiController
 
     public function destroy(Post $post)
     {
-        $post->delete();
+        return $post->delete();
 
-        return $this->showOne($post);
+//        return $this->showOne($post);
     }
 }
