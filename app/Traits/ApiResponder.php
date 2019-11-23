@@ -89,7 +89,6 @@ trait ApiResponder
 
     protected function transformData($data, $transformer)
     {
-        dd($data, $transformer);
         $transformation = fractal($data, new $transformer);
 
 

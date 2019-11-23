@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Transformers/PostTransformer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManageUsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/SignupMiddleWare.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/SignupMiddleWare.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ManageUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManageUsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +213,8 @@
       <workItem from="1574410927603" duration="22000" />
       <workItem from="1574410964448" duration="456000" />
       <workItem from="1574411476118" duration="2592000" />
-      <workItem from="1574417282285" duration="4120000" />
+      <workItem from="1574417282285" duration="4349000" />
+      <workItem from="1574523019962" duration="2260000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
