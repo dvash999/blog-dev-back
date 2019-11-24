@@ -6,7 +6,7 @@ use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
-class PostController extends ApiController
+class ManagePostController extends ApiController
 {
     public function index()
     {
@@ -34,7 +34,7 @@ class PostController extends ApiController
             return $e;
         }
 
-        return Response(['status' => 200, 'message' => 'PostTransformer saved!']);
+        return Response(['status' => 200, 'message' => 'success']);
     }
 
     public function show(Post $post)
@@ -67,10 +67,10 @@ class PostController extends ApiController
         return $this->showOne($post);
     }
 
-    public function destroy(Post $post)
+    public function destroy(Post $manage_post)
     {
-        return $post->delete();
+       return $manage_post->delete() ? response(['message' => $manage_post]) : response(['message' => false]);
 
-//        return $this->showOne($post);
+//      return $this->showOne($post);
     }
 }

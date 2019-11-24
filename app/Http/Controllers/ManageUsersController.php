@@ -83,12 +83,9 @@ class ManageUsersController extends ApiController
         return $this->showOne($user);
     }
 
-    public function destroy(User $user, $manage_post)
+    public function destroy(User $manage_user)
     {
-        User::find($manage_post)
-            ->delete();
-
-        return User::all();
+        return $manage_user->delete() ? response(['message' => $manage_user]) : response(['message' => false]);
 
 //        return $this->showOne($user);
     }
