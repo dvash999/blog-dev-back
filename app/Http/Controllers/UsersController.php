@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class ManageUsersController extends ApiController
+class UsersController extends ApiController
 {
     public function index()
     {

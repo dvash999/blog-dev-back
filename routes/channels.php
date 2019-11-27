@@ -11,6 +11,6 @@
 |
 */
 
-Broadcast::channel('App.ManageUsersController.{id}', function ($user, $id) {
+Broadcast::channel('App.UsersController.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });

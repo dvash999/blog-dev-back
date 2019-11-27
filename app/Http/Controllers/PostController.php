@@ -6,7 +6,7 @@ use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
-class ManagePostController extends ApiController
+class PostController extends ApiController
 {
     public function index()
     {

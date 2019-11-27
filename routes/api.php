@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use app\Http\Controllers\ManagePostController;
+use app\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,7 @@ use app\Http\Controllers\ManagePostController;
 |
 */
 
-Route::resource('admin/manage-posts', 'ManagePostController', ['except' => ['create', 'edit']]);
-Route::resource('admin/manage-users', 'ManageUsersController', ['except' => ['create', 'edit']]);
-Route::name('verify')->get('admin/users/verify/{token}', 'ManageUsersController@verify');
-Route::name('resend')->get('admin/users/resend/{token}', 'ManageUsersController@resend');
+Route::resource('admin/posts', 'PostController', ['except' => ['create', 'edit']]);
+Route::resource('admin/users', 'UsersController', ['except' => ['create', 'edit']]);
+Route::name('verify')->get('admin/users/verify/{token}', 'UsersController@verify');
+Route::name('resend')->get('admin/users/resend/{token}', 'UsersController@resend');
