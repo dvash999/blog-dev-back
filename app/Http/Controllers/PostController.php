@@ -11,8 +11,10 @@ class PostController extends ApiController
     public function index()
     {
         $posts = Post::getAllPosts();
-
+//
         return $this->showAll($posts);
+//        dd(Post::all());
+//        return Post::all();
     }
 
 
@@ -67,10 +69,9 @@ class PostController extends ApiController
         return $this->showOne($post);
     }
 
-    public function destroy(Post $manage_post)
+    public function destroy(Post $post)
     {
-       return $manage_post->delete() ? response(['message' => $manage_post]) : response(['message' => false]);
-
+       return $post->delete() ? response(['message' => Post::all()]) : response(['message' => false]);
 //      return $this->showOne($post);
     }
 }
