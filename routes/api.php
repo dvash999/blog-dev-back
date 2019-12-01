@@ -15,6 +15,6 @@ use app\Http\Controllers\PostController;
 */
 
 Route::resource('admin/posts', 'PostController', ['except' => ['create', 'edit']]);
-Route::resource('admin/users', 'UsersController', ['except' => ['create', 'edit']]);
-Route::name('verify')->get('admin/users/verify/{token}', 'UsersController@verify');
-Route::name('resend')->get('admin/users/resend/{token}', 'UsersController@resend');
+Route::resource('admin/users', 'UserController', ['except' => ['create', 'edit']]);
+Route::name('verify')->get('admin/users/verify/{token}', 'UserController@verify');
+Route::name('resend')->get('admin/users/resend/{token}', 'UserController@resend');

@@ -11,10 +11,8 @@ class PostController extends ApiController
     public function index()
     {
         $posts = Post::getAllPosts();
-//
+
         return $this->showAll($posts);
-//        dd(Post::all());
-//        return Post::all();
     }
 
 

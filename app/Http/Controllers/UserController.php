@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class UsersController extends ApiController
+class UserController extends ApiController
 {
     public function index()
     {
@@ -83,9 +83,9 @@ class UsersController extends ApiController
         return $this->showOne($user);
     }
 
-    public function destroy(User $manage_user)
+    public function destroy(User $user)
     {
-        return $manage_user->delete() ? response(['message' => $manage_user]) : response(['message' => false]);
+        return $user->delete() ? response(['message' => User::all()]) : response(['message' => false]);
 
 //        return $this->showOne($user);
     }
