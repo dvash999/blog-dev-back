@@ -12,7 +12,8 @@ trait ApiResponder
 {
     private function successResponse($data, $code)
     {
-        return response()->json($data, $code);
+//        return 'ol';
+        return response()->json(['message' => $data, 'code' => $code], $code);
     }
 
     protected function errorResponse($message, $code)
@@ -90,8 +91,6 @@ trait ApiResponder
     protected function transformData($data, $transformer)
     {
         $transformation = fractal($data, new $transformer);
-
-
         return $transformation->toArray();
     }
 

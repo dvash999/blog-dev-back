@@ -16,6 +16,13 @@ use app\Http\Controllers\PostController;
 
 Route::resource('admin/posts', 'PostController', ['except' => ['create', 'edit']]);
 Route::resource('admin/users', 'UserController', ['except' => ['create', 'edit']]);
+//Route::get('/alertBox', function() {
+//    return view('eventListener');
+//});
+//
+//Route:get('/fireEvent', function() {
+//    event(new \App\Events\eventTrigger());
+//});
 
 Route::resource('posts', 'PostController', ['except' => ['create', 'edit']]);
 

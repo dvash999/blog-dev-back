@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
+use App\Transformers\PostTransformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
     protected $fillable = ['title', 'author', 'content' ];
+
+
+    public $transformer = PostTransformer::class;
 
     public static function getAllPosts()
     {
