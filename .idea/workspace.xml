@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Broadcast.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Events/eventTrigger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Dashboard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Listeners/popUpBox.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Providers/HorizonServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/horizon.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel-echo-server.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/app-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/img/horizon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/img/sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/horizon/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/event.listener.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wineExpertz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wineExpertz.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Transformers/PostTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/PostTransformer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +232,8 @@
       <workItem from="1575645866321" duration="711000" />
       <workItem from="1575915753052" duration="7108000" />
       <workItem from="1576318857802" duration="4579000" />
-      <workItem from="1576347123943" duration="2686000" />
+      <workItem from="1576347123943" duration="2707000" />
+      <workItem from="1576780178019" duration="43000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -284,6 +258,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="432" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576780199658">
+      <screen x="49" y="23" width="1391" height="877" />
+    </state>
+    <state x="432" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/49.23.1391.877@49.23.1391.877" timestamp="1576780199658" />
     <state width="1349" height="293" key="GridCell.Tab.0.bottom" timestamp="1576353881381">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
