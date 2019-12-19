@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -9,8 +10,9 @@ class PostController extends ApiController
 {
     public function index()
     {
-        $post = Post::all();
-        return $this->showAll($post);
+        $posts = Post::getAllPosts();
+
+        return $this->showAll($posts);
     }
 
 
@@ -23,25 +25,34 @@ class PostController extends ApiController
             'date' => 'date',
         ];
 
-        $this->verified($request, $rules);
+        $this->validate($request, $rules);
+        $post = $request->all();
 
-        $data = $request->all();
-        $post = $data->create();
+        try {
+            Post::storePost($post);
+        } catch (\Exception $e) {
+            return $e;
+        }
 
-        return $this->showOne($post);
+        return Response(['status' => 200, 'message' => 'success']);
     }
 
-    public function show($id)
+    public function show(Post $post)
     {
-        $post = Post::findOrFail($id);
-        return $this->showOne($post);
+        // TODO use validation for the ID in the request
+//        $this->showOne($post);
+
+        if ($post) {
+            return Response(['message' => $post, 'status' => 200, ]);
+        } else {
+            return Response(['message' => null, 'status' => 404]);
+        }
+//        return $this->showOne($post);
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        $post = Post::findOrFail($id);
-
         $rules = [
             'author' => 'required',
             'title' => 'required',
@@ -64,11 +75,9 @@ class PostController extends ApiController
         return $this->showOne($post);
     }
 
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        $post = Post::findOrFail($id);
-        $post->delete();
-
-        return $this->showOne($post);
+       return $post->delete() ? response(['message' => Post::all()]) : response(['message' => false]);
+//      return $this->showOne($post);
     }
 }

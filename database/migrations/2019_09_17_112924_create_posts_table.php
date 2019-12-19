@@ -15,6 +15,7 @@ class CreatePostsTable extends Migration
             $table->string('content');
             $table->date('date');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     public function down()

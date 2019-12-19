@@ -2,22 +2,26 @@
 
 namespace App\Models;
 
+use App\Transformers\PostTransformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
+    protected $fillable = ['title', 'author', 'content' ];
+
+
+    public $transformer = PostTransformer::class;
+
+    public static function getAllPosts()
+    {
+        return Post::all();
+    }
+
     public static function storePost($post)
     {
-//        $isSaved = DB::transaction(function () use ($post) {
-//                    $newPost = new Post;
-//                    foreach ($post as $key => $value) {
-//                        $newPost[$key] = $post[$key];
-//                    }
-//                    $newPost->save();
-//                    return true;
-//                });
-//            return response()->json(['message' => $isSaved ? 'success' : 'failed', 'status' => $isSaved ? 200 : 401]);
+        $post = new self($post);
+        $post->save();
     }
 
     public static function showPost($id)

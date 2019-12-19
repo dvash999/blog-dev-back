@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome to Wine Expertz
                 </div>
             </div>
         </div>

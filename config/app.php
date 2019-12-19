@@ -1,5 +1,8 @@
 <?php
 
+use Laravel\Passport\PassportServiceProvider;
+use Laravel\Tinker\TinkerServiceProvider;
+
 return [
 
     /*
@@ -13,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Wine Expertz'),
 
     /*
     |--------------------------------------------------------------------------
@@ -165,6 +168,9 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Passport\PassportServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
+        Spatie\Fractal\FractalServiceProvider::class,
 
         /*
          * Application Service Providers...

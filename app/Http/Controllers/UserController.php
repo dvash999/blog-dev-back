@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\UserCreated;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends ApiController
 {
     public function index()
     {
-        $users = User::all();
-        return $this->showAll($users);
+         return User::all();
+//        return $this->showAll();
     }
 
     public function create()
@@ -39,9 +41,8 @@ class UserController extends ApiController
         return $this->showOne($user);
     }
 
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::findOrFail($id);
         return $this->showOne($user);
     }
 
@@ -50,10 +51,8 @@ class UserController extends ApiController
         //
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        $user = User::findOrFail($id);
-
         $rules = [
             'email' => 'email|unique:users,email,' . $user->id,
             'password' => 'min:6|confirmed',
@@ -76,7 +75,7 @@ class UserController extends ApiController
         }
 
         if (!$user->isDirty()) {
-            return response()->json(['error' => 'You need to specify a different value in order to change', 'code' => 422], 422);
+            return $this->errorResponse(['error' => 'You need to specify a different value in order to change', 'code' => 422], 422);
         }
 
         $user->save();
@@ -84,17 +83,36 @@ class UserController extends ApiController
         return $this->showOne($user);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
+        return $user->delete() ? response(['message' => User::all()]) : response(['message' => false]);
 
-        return $this->showOne($user);
+//        return $this->showOne($user);
+    }
+
+    public function verify($token)
+    {
+        $user = User::where('verification_token', $token)->firstOrFail();
+
+        $user->verified = User::VERIFIED_USER;
+        $user->verification_token = null;
+
+        $user->save();
+
+        return $this->showMessage('Your account has been verified.');
+
+    }
+
+    public function resend(User $user)
+    {
+        if($user->isVerified()) {
+            return $this->errorResponse('You are already verified.', 409);
+        }
+
+        retry(5, function() use ($user) {
+            Mail::to($user)->send(new UserCreated($user));
+        }, 100);
+
+        return $this->showMessage('The verification code has been sent.');
     }
 }
