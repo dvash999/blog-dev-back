@@ -52,7 +52,7 @@
 /******/ 	// mode & 1: value is a module id, require it
 /******/ 	// mode & 2: merge all properties of value into the ns
 /******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
+/******/ 	// mode & 8|1: behave likeController require
 /******/ 	__webpack_require__.t = function(value, mode) {
 /******/ 		if(mode & 1) value = __webpack_require__(value);
 /******/ 		if(mode & 8) return value;
@@ -2025,7 +2025,7 @@ __webpack_require__.r(__webpack_exports__);
     getUID: function getUID(prefix) {
       do {
         // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+        prefix += ~~(Math.random() * MAX_UID); // "~~" acts likeController a faster Math.floor() here
       } while (document.getElementById(prefix));
 
       return prefix;
@@ -6355,7 +6355,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 	if (  true && typeof module.exports === "object" ) {
 
-		// For CommonJS and CommonJS-like environments where a proper `window`
+		// For CommonJS and CommonJS-likeController environments where a proper `window`
 		// is present, execute the factory and get jQuery.
 		// For environments that do not have a `window` with a `document`
 		// (such as Node.js), expose a factory as module.exports.
@@ -6569,7 +6569,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	// For internal use only.
-	// Behaves like an Array's method, not like a jQuery method.
+	// Behaves likeController an Array's method, not likeController a jQuery method.
 	push: push,
 	sort: arr.sort,
 	splice: arr.splice
@@ -9567,16 +9567,16 @@ function createOptions( options ) {
  *	options: an optional list of space-separated options that will change how
  *			the callback list behaves or a more traditional option object
  *
- * By default a callback list will act like an event callback list and can be
+ * By default a callback list will act likeController an event callback list and can be
  * "fired" multiple times.
  *
  * Possible options:
  *
- *	once:			will ensure the callback list can only be fired once (like a Deferred)
+ *	once:			will ensure the callback list can only be fired once (likeController a Deferred)
  *
  *	memory:			will keep track of previous values and will call any callback added
  *					after the list has been fired right away with the latest "memorized"
- *					values (like a Deferred)
+ *					values (likeController a Deferred)
  *
  *	unique:			will ensure a callback can only be added once (no duplicate in the list)
  *
@@ -10144,7 +10144,7 @@ jQuery.extend( {
 				};
 			};
 
-		// Single- and empty arguments are adopted like Promise.resolve
+		// Single- and empty arguments are adopted likeController Promise.resolve
 		if ( remaining <= 1 ) {
 			adoptValue( singleValue, master.done( updateFunc( i ) ).resolve, master.reject,
 				!remaining );
@@ -10157,7 +10157,7 @@ jQuery.extend( {
 			}
 		}
 
-		// Multiple arguments are aggregated like Promise.all array elements
+		// Multiple arguments are aggregated likeController Promise.all array elements
 		while ( i-- ) {
 			adoptValue( resolveValues[ i ], updateFunc( i ), master.reject );
 		}
@@ -13474,7 +13474,7 @@ function defaultPrefilter( elem, props, opts ) {
 		}
 	}
 
-	// Bail out if this is a no-op like .hide().hide()
+	// Bail out if this is a no-op likeController .hide().hide()
 	propTween = !jQuery.isEmptyObject( props );
 	if ( !propTween && jQuery.isEmptyObject( orig ) ) {
 		return;
@@ -17549,7 +17549,7 @@ return jQuery;
   }
 
   /**
-   * This function is like `arrayIncludes` except that it accepts a comparator.
+   * This function is likeController `arrayIncludes` except that it accepts a comparator.
    *
    * @private
    * @param {Array} [array] The array to inspect.
@@ -17710,7 +17710,7 @@ return jQuery;
   }
 
   /**
-   * The base implementation of methods like `_.findKey` and `_.findLastKey`,
+   * The base implementation of methods likeController `_.findKey` and `_.findLastKey`,
    * without support for iteratee shorthands, which iterates over `collection`
    * using `eachFunc`.
    *
@@ -17770,7 +17770,7 @@ return jQuery;
   }
 
   /**
-   * This function is like `baseIndexOf` except that it accepts a comparator.
+   * This function is likeController `baseIndexOf` except that it accepts a comparator.
    *
    * @private
    * @param {Array} array The array to inspect.
@@ -18654,7 +18654,7 @@ return jQuery;
     }
 
     /**
-     * By default, the template delimiters used by lodash are like those in
+     * By default, the template delimiters used by lodash are likeController those in
      * embedded Ruby (ERB) as well as ES2015 template strings. Change the
      * following template settings to use alternative delimiters.
      *
@@ -19321,7 +19321,7 @@ return jQuery;
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates an array of the enumerable property names of the array-like `value`.
+     * Creates an array of the enumerable property names of the array-likeController `value`.
      *
      * @private
      * @param {*} value The value to query.
@@ -19391,7 +19391,7 @@ return jQuery;
     }
 
     /**
-     * This function is like `assignValue` except that it doesn't assign
+     * This function is likeController `assignValue` except that it doesn't assign
      * `undefined` values.
      *
      * @private
@@ -19699,7 +19699,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of methods like `_.difference` without support
+     * The base implementation of methods likeController `_.difference` without support
      * for excluding multiple arrays or iteratee shorthands.
      *
      * @private
@@ -19793,7 +19793,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of methods like `_.max` and `_.min` which accepts a
+     * The base implementation of methods likeController `_.max` and `_.min` which accepts a
      * `comparator` to determine the extremum value.
      *
      * @private
@@ -19915,7 +19915,7 @@ return jQuery;
     var baseFor = createBaseFor();
 
     /**
-     * This function is like `baseFor` except that it iterates over properties
+     * This function is likeController `baseFor` except that it iterates over properties
      * in the opposite order.
      *
      * @private
@@ -20068,7 +20068,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of methods like `_.intersection`, without support
+     * The base implementation of methods likeController `_.intersection`, without support
      * for iteratee shorthands, that accepts an array of arrays to inspect.
      *
      * @private
@@ -21275,7 +21275,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of methods like `_.dropWhile` and `_.takeWhile`
+     * The base implementation of methods likeController `_.dropWhile` and `_.takeWhile`
      * without support for iteratee shorthands.
      *
      * @private
@@ -21318,7 +21318,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of methods like `_.xor`, without support for
+     * The base implementation of methods likeController `_.xor`, without support for
      * iteratee shorthands, that accepts an array of arrays to inspect.
      *
      * @private
@@ -21371,11 +21371,11 @@ return jQuery;
     }
 
     /**
-     * Casts `value` to an empty array if it's not an array like object.
+     * Casts `value` to an empty array if it's not an array likeController object.
      *
      * @private
      * @param {*} value The value to inspect.
-     * @returns {Array|Object} Returns the cast array-like object.
+     * @returns {Array|Object} Returns the cast array-likeController object.
      */
     function castArrayLikeObject(value) {
       return isArrayLikeObject(value) ? value : [];
@@ -21640,7 +21640,7 @@ return jQuery;
     }
 
     /**
-     * This function is like `composeArgs` except that the arguments composition
+     * This function is likeController `composeArgs` except that the arguments composition
      * is tailored for `_.partialRight`.
      *
      * @private
@@ -21756,7 +21756,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.groupBy`.
+     * Creates a function likeController `_.groupBy`.
      *
      * @private
      * @param {Function} setter The function to set accumulator values.
@@ -21773,7 +21773,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.assign`.
+     * Creates a function likeController `_.assign`.
      *
      * @private
      * @param {Function} assigner The function to assign values.
@@ -21835,7 +21835,7 @@ return jQuery;
     }
 
     /**
-     * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+     * Creates a base function for methods likeController `_.forIn` and `_.forOwn`.
      *
      * @private
      * @param {boolean} [fromRight] Specify iterating from right to left.
@@ -21880,7 +21880,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.lowerFirst`.
+     * Creates a function likeController `_.lowerFirst`.
      *
      * @private
      * @param {string} methodName The name of the `String` case method to use.
@@ -21907,7 +21907,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.camelCase`.
+     * Creates a function likeController `_.camelCase`.
      *
      * @private
      * @param {Function} callback The function to combine each word.
@@ -22144,7 +22144,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.invertBy`.
+     * Creates a function likeController `_.invertBy`.
      *
      * @private
      * @param {Function} setter The function to set accumulator values.
@@ -22192,7 +22192,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.over`.
+     * Creates a function likeController `_.over`.
      *
      * @private
      * @param {Function} arrayFunc The function to iterate over iteratees.
@@ -22353,7 +22353,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function like `_.round`.
+     * Creates a function likeController `_.round`.
      *
      * @private
      * @param {string} methodName The name of the `Math` method to use when rounding.
@@ -23198,7 +23198,7 @@ return jQuery;
     }
 
     /**
-     * Checks if `value` is a valid array-like index.
+     * Checks if `value` is a valid array-likeController index.
      *
      * @private
      * @param {*} value The value to check.
@@ -23385,8 +23385,8 @@ return jQuery;
      * Merges the function metadata of `source` into `data`.
      *
      * Merging metadata reduces the number of wrappers used to invoke a function.
-     * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
-     * may be applied regardless of execution order. Methods like `_.ary` and
+     * This is possible because methods likeController `_.bind`, `_.curry`, and `_.partial`
+     * may be applied regardless of execution order. Methods likeController `_.ary` and
      * `_.rearg` modify function arguments, making the order in which they are
      * executed important, preventing the merging of metadata. However, we make
      * an exception for a safe combined case where curried functions have `_.ary`
@@ -23453,7 +23453,7 @@ return jQuery;
     }
 
     /**
-     * This function is like
+     * This function is likeController
      * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
      * except that it includes inherited enumerable properties.
      *
@@ -23774,7 +23774,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to process.
      * @param {number} [size=1] The length of each chunk
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the new array of chunks.
      * @example
      *
@@ -23899,7 +23899,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.difference` except that it accepts `iteratee` which
+     * This method is likeController `_.difference` except that it accepts `iteratee` which
      * is invoked for each element of `array` and `values` to generate the criterion
      * by which they're compared. The order and references of result values are
      * determined by the first array. The iteratee is invoked with one argument:
@@ -23935,7 +23935,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.difference` except that it accepts `comparator`
+     * This method is likeController `_.difference` except that it accepts `comparator`
      * which is invoked to compare elements of `array` to `values`. The order and
      * references of result values are determined by the first array. The comparator
      * is invoked with two arguments: (arrVal, othVal).
@@ -23976,7 +23976,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to query.
      * @param {number} [n=1] The number of elements to drop.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the slice of `array`.
      * @example
      *
@@ -24010,7 +24010,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to query.
      * @param {number} [n=1] The number of elements to drop.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the slice of `array`.
      * @example
      *
@@ -24160,7 +24160,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.find` except that it returns the index of the first
+     * This method is likeController `_.find` except that it returns the index of the first
      * element `predicate` returns truthy for instead of the element itself.
      *
      * @static
@@ -24207,7 +24207,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.findIndex` except that it iterates over elements
+     * This method is likeController `_.findIndex` except that it iterates over elements
      * of `collection` from right to left.
      *
      * @static
@@ -24451,7 +24451,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.intersection` except that it accepts `iteratee`
+     * This method is likeController `_.intersection` except that it accepts `iteratee`
      * which is invoked for each element of each `arrays` to generate the criterion
      * by which they're compared. The order and references of result values are
      * determined by the first array. The iteratee is invoked with one argument:
@@ -24488,7 +24488,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.intersection` except that it accepts `comparator`
+     * This method is likeController `_.intersection` except that it accepts `comparator`
      * which is invoked to compare elements of `arrays`. The order and references
      * of result values are determined by the first array. The comparator is
      * invoked with two arguments: (arrVal, othVal).
@@ -24560,7 +24560,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.indexOf` except that it iterates over elements of
+     * This method is likeController `_.indexOf` except that it iterates over elements of
      * `array` from right to left.
      *
      * @static
@@ -24646,7 +24646,7 @@ return jQuery;
     var pull = baseRest(pullAll);
 
     /**
-     * This method is like `_.pull` except that it accepts an array of values to remove.
+     * This method is likeController `_.pull` except that it accepts an array of values to remove.
      *
      * **Note:** Unlike `_.difference`, this method mutates `array`.
      *
@@ -24672,7 +24672,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.pullAll` except that it accepts `iteratee` which is
+     * This method is likeController `_.pullAll` except that it accepts `iteratee` which is
      * invoked for each element of `array` and `values` to generate the criterion
      * by which they're compared. The iteratee is invoked with one argument: (value).
      *
@@ -24701,7 +24701,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.pullAll` except that it accepts `comparator` which
+     * This method is likeController `_.pullAll` except that it accepts `comparator` which
      * is invoked to compare elements of `array` to `values`. The comparator is
      * invoked with two arguments: (arrVal, othVal).
      *
@@ -24894,7 +24894,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.sortedIndex` except that it accepts `iteratee`
+     * This method is likeController `_.sortedIndex` except that it accepts `iteratee`
      * which is invoked for `value` and each element of `array` to compute their
      * sort ranking. The iteratee is invoked with one argument: (value).
      *
@@ -24923,7 +24923,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.indexOf` except that it performs a binary
+     * This method is likeController `_.indexOf` except that it performs a binary
      * search on a sorted `array`.
      *
      * @static
@@ -24950,7 +24950,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.sortedIndex` except that it returns the highest
+     * This method is likeController `_.sortedIndex` except that it returns the highest
      * index at which `value` should be inserted into `array` in order to
      * maintain its sort order.
      *
@@ -24972,7 +24972,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.sortedLastIndex` except that it accepts `iteratee`
+     * This method is likeController `_.sortedLastIndex` except that it accepts `iteratee`
      * which is invoked for `value` and each element of `array` to compute their
      * sort ranking. The iteratee is invoked with one argument: (value).
      *
@@ -25001,7 +25001,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.lastIndexOf` except that it performs a binary
+     * This method is likeController `_.lastIndexOf` except that it performs a binary
      * search on a sorted `array`.
      *
      * @static
@@ -25028,7 +25028,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.uniq` except that it's designed and optimized
+     * This method is likeController `_.uniq` except that it's designed and optimized
      * for sorted arrays.
      *
      * @static
@@ -25049,7 +25049,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.uniqBy` except that it's designed and optimized
+     * This method is likeController `_.uniqBy` except that it's designed and optimized
      * for sorted arrays.
      *
      * @static
@@ -25098,7 +25098,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to query.
      * @param {number} [n=1] The number of elements to take.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the slice of `array`.
      * @example
      *
@@ -25131,7 +25131,7 @@ return jQuery;
      * @category Array
      * @param {Array} array The array to query.
      * @param {number} [n=1] The number of elements to take.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the slice of `array`.
      * @example
      *
@@ -25260,7 +25260,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.union` except that it accepts `iteratee` which is
+     * This method is likeController `_.union` except that it accepts `iteratee` which is
      * invoked for each element of each `arrays` to generate the criterion by
      * which uniqueness is computed. Result values are chosen from the first
      * array in which the value occurs. The iteratee is invoked with one argument:
@@ -25291,7 +25291,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.union` except that it accepts `comparator` which
+     * This method is likeController `_.union` except that it accepts `comparator` which
      * is invoked to compare elements of `arrays`. Result values are chosen from
      * the first array in which the value occurs. The comparator is invoked
      * with two arguments: (arrVal, othVal).
@@ -25340,7 +25340,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.uniq` except that it accepts `iteratee` which is
+     * This method is likeController `_.uniq` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the criterion by which
      * uniqueness is computed. The order of result values is determined by the
      * order they occur in the array. The iteratee is invoked with one argument:
@@ -25367,7 +25367,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.uniq` except that it accepts `comparator` which
+     * This method is likeController `_.uniq` except that it accepts `comparator` which
      * is invoked to compare elements of `array`. The order of result values is
      * determined by the order they occur in the array.The comparator is invoked
      * with two arguments: (arrVal, othVal).
@@ -25392,7 +25392,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.zip` except that it accepts an array of grouped
+     * This method is likeController `_.zip` except that it accepts an array of grouped
      * elements and creates an array regrouping the elements to their pre-zip
      * configuration.
      *
@@ -25427,7 +25427,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.unzip` except that it accepts `iteratee` to specify
+     * This method is likeController `_.unzip` except that it accepts `iteratee` to specify
      * how regrouped values should be combined. The iteratee is invoked with the
      * elements of each group: (...group).
      *
@@ -25509,7 +25509,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.xor` except that it accepts `iteratee` which is
+     * This method is likeController `_.xor` except that it accepts `iteratee` which is
      * invoked for each element of each `arrays` to generate the criterion by
      * which by which they're compared. The order of result values is determined
      * by the order they occur in the arrays. The iteratee is invoked with one
@@ -25540,7 +25540,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.xor` except that it accepts `comparator` which is
+     * This method is likeController `_.xor` except that it accepts `comparator` which is
      * invoked to compare elements of `arrays`. The order of result values is
      * determined by the order they occur in the arrays. The comparator is invoked
      * with two arguments: (arrVal, othVal).
@@ -25585,7 +25585,7 @@ return jQuery;
     var zip = baseRest(unzip);
 
     /**
-     * This method is like `_.fromPairs` except that it accepts two arrays,
+     * This method is likeController `_.fromPairs` except that it accepts two arrays,
      * one of property identifiers and one of corresponding values.
      *
      * @static
@@ -25605,7 +25605,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.zipObject` except that it supports property paths.
+     * This method is likeController `_.zipObject` except that it supports property paths.
      *
      * @static
      * @memberOf _
@@ -25624,7 +25624,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.zip` except that it accepts `iteratee` to specify
+     * This method is likeController `_.zip` except that it accepts `iteratee` to specify
      * how grouped values should be combined. The iteratee is invoked with the
      * elements of each group: (...group).
      *
@@ -25717,7 +25717,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.tap` except that it returns the result of `interceptor`.
+     * This method is likeController `_.tap` except that it returns the result of `interceptor`.
      * The purpose of this method is to "pass thru" values replacing intermediate
      * results in a method chain sequence.
      *
@@ -26046,7 +26046,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {boolean} Returns `true` if all elements pass the predicate check,
      *  else `false`.
      * @example
@@ -26160,7 +26160,7 @@ return jQuery;
     var find = createFind(findIndex);
 
     /**
-     * This method is like `_.find` except that it iterates over elements of
+     * This method is likeController `_.find` except that it iterates over elements of
      * `collection` from right to left.
      *
      * @static
@@ -26206,7 +26206,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.flatMap` except that it recursively flattens the
+     * This method is likeController `_.flatMap` except that it recursively flattens the
      * mapped results.
      *
      * @static
@@ -26230,7 +26230,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.flatMap` except that it recursively flattens the
+     * This method is likeController `_.flatMap` except that it recursively flattens the
      * mapped results up to `depth` times.
      *
      * @static
@@ -26261,7 +26261,7 @@ return jQuery;
      * Iteratee functions may exit iteration early by explicitly returning `false`.
      *
      * **Note:** As with other "Collections" methods, objects with a "length"
-     * property are iterated like arrays. To avoid this behavior use `_.forIn`
+     * property are iterated likeController arrays. To avoid this behavior use `_.forIn`
      * or `_.forOwn` for object iteration.
      *
      * @static
@@ -26291,7 +26291,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.forEach` except that it iterates over elements of
+     * This method is likeController `_.forEach` except that it iterates over elements of
      * `collection` from right to left.
      *
      * @static
@@ -26360,7 +26360,7 @@ return jQuery;
      * @param {Array|Object|string} collection The collection to inspect.
      * @param {*} value The value to search for.
      * @param {number} [fromIndex=0] The index to search from.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.reduce`.
      * @returns {boolean} Returns `true` if `value` is found, else `false`.
      * @example
      *
@@ -26460,7 +26460,7 @@ return jQuery;
      * `iteratee`. The iteratee is invoked with three arguments:
      * (value, index|key, collection).
      *
-     * Many lodash methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods likeController
      * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
      *
      * The guarded methods are:
@@ -26503,7 +26503,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.sortBy` except that it allows specifying the sort
+     * This method is likeController `_.sortBy` except that it allows specifying the sort
      * orders of the iteratees to sort by. If `orders` is unspecified, all values
      * are sorted in ascending order. Otherwise, specify an order of "desc" for
      * descending or "asc" for ascending sort order of corresponding values.
@@ -26516,7 +26516,7 @@ return jQuery;
      * @param {Array[]|Function[]|Object[]|string[]} [iteratees=[_.identity]]
      *  The iteratees to sort by.
      * @param {string[]} [orders] The sort orders of `iteratees`.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.reduce`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.reduce`.
      * @returns {Array} Returns the new sorted array.
      * @example
      *
@@ -26593,7 +26593,7 @@ return jQuery;
      * value. The iteratee is invoked with four arguments:
      * (accumulator, value, index|key, collection).
      *
-     * Many lodash methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods likeController
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
@@ -26630,7 +26630,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.reduce` except that it iterates over elements of
+     * This method is likeController `_.reduce` except that it iterates over elements of
      * `collection` from right to left.
      *
      * @static
@@ -26726,7 +26726,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to sample.
      * @param {number} [n=1] The number of elements to sample.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the random elements.
      * @example
      *
@@ -26767,7 +26767,7 @@ return jQuery;
     }
 
     /**
-     * Gets the size of `collection` by returning its length for array-like
+     * Gets the size of `collection` by returning its length for array-likeController
      * values or the number of own enumerable string keyed properties for objects.
      *
      * @static
@@ -26812,7 +26812,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [predicate=_.identity] The function invoked per iteration.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {boolean} Returns `true` if any element passes the predicate check,
      *  else `false`.
      * @example
@@ -26957,7 +26957,7 @@ return jQuery;
      * @category Function
      * @param {Function} func The function to cap arguments for.
      * @param {number} [n=func.length] The arity cap.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Function} Returns the new capped function.
      * @example
      *
@@ -27120,7 +27120,7 @@ return jQuery;
      * @category Function
      * @param {Function} func The function to curry.
      * @param {number} [arity=func.length] The arity of `func`.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Function} Returns the new curried function.
      * @example
      *
@@ -27151,7 +27151,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.curry` except that arguments are applied to `func`
+     * This method is likeController `_.curry` except that arguments are applied to `func`
      * in the manner of `_.partialRight` instead of `_.partial`.
      *
      * The `_.curryRight.placeholder` value, which defaults to `_` in monolithic
@@ -27165,7 +27165,7 @@ return jQuery;
      * @category Function
      * @param {Function} func The function to curry.
      * @param {number} [arity=func.length] The arity of `func`.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Function} Returns the new curried function.
      * @example
      *
@@ -27616,7 +27616,7 @@ return jQuery;
 
     /**
      * Creates a function that invokes `func` with `partials` prepended to the
-     * arguments it receives. This method is like `_.bind` except it does **not**
+     * arguments it receives. This method is likeController `_.bind` except it does **not**
      * alter the `this` binding.
      *
      * The `_.partial.placeholder` value, which defaults to `_` in monolithic
@@ -27653,7 +27653,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.partial` except that partially applied arguments
+     * This method is likeController `_.partial` except that partially applied arguments
      * are appended to the arguments it receives.
      *
      * The `_.partialRight.placeholder` value, which defaults to `_` in monolithic
@@ -27750,7 +27750,7 @@ return jQuery;
 
     /**
      * Creates a function that invokes `func` with the `this` binding of the
-     * create function and an array of arguments much like
+     * create function and an array of arguments much likeController
      * [`Function#apply`](http://www.ecma-international.org/ecma-262/7.0/#sec-function.prototype.apply).
      *
      * **Note:** This method is based on the
@@ -27979,7 +27979,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.clone` except that it accepts `customizer` which
+     * This method is likeController `_.clone` except that it accepts `customizer` which
      * is invoked to produce the cloned value. If `customizer` returns `undefined`,
      * cloning is handled by the method instead. The `customizer` is invoked with
      * up to four arguments; (value [, index|key, object, stack]).
@@ -28015,7 +28015,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.clone` except that it recursively clones `value`.
+     * This method is likeController `_.clone` except that it recursively clones `value`.
      *
      * @static
      * @memberOf _
@@ -28037,7 +28037,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.cloneWith` except that it recursively clones `value`.
+     * This method is likeController `_.cloneWith` except that it recursively clones `value`.
      *
      * @static
      * @memberOf _
@@ -28253,7 +28253,7 @@ return jQuery;
     var isArrayBuffer = nodeIsArrayBuffer ? baseUnary(nodeIsArrayBuffer) : baseIsArrayBuffer;
 
     /**
-     * Checks if `value` is array-like. A value is considered array-like if it's
+     * Checks if `value` is array-likeController. A value is considered array-likeController if it's
      * not a function and has a `value.length` that's an integer greater than or
      * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
      *
@@ -28262,7 +28262,7 @@ return jQuery;
      * @since 4.0.0
      * @category Lang
      * @param {*} value The value to check.
-     * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+     * @returns {boolean} Returns `true` if `value` is array-likeController, else `false`.
      * @example
      *
      * _.isArrayLike([1, 2, 3]);
@@ -28282,7 +28282,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.isArrayLike` except that it also checks if `value`
+     * This method is likeController `_.isArrayLike` except that it also checks if `value`
      * is an object.
      *
      * @static
@@ -28290,7 +28290,7 @@ return jQuery;
      * @since 4.0.0
      * @category Lang
      * @param {*} value The value to check.
-     * @returns {boolean} Returns `true` if `value` is an array-like object,
+     * @returns {boolean} Returns `true` if `value` is an array-likeController object,
      *  else `false`.
      * @example
      *
@@ -28397,8 +28397,8 @@ return jQuery;
      * Objects are considered empty if they have no own enumerable string keyed
      * properties.
      *
-     * Array-like values such as `arguments` objects, arrays, buffers, strings, or
-     * jQuery-like collections are considered empty if they have a `length` of `0`.
+     * Array-likeController values such as `arguments` objects, arrays, buffers, strings, or
+     * jQuery-likeController collections are considered empty if they have a `length` of `0`.
      * Similarly, maps and sets are considered empty if they have a `size` of `0`.
      *
      * @static
@@ -28481,7 +28481,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.isEqual` except that it accepts `customizer` which
+     * This method is likeController `_.isEqual` except that it accepts `customizer` which
      * is invoked to compare values. If `customizer` returns `undefined`, comparisons
      * are handled by the method instead. The `customizer` is invoked with up to
      * six arguments: (objValue, othValue [, index|key, object, other, stack]).
@@ -28633,7 +28633,7 @@ return jQuery;
     }
 
     /**
-     * Checks if `value` is a valid array-like length.
+     * Checks if `value` is a valid array-likeController length.
      *
      * **Note:** This method is loosely based on
      * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
@@ -28694,7 +28694,7 @@ return jQuery;
     }
 
     /**
-     * Checks if `value` is object-like. A value is object-like if it's not `null`
+     * Checks if `value` is object-likeController. A value is object-likeController if it's not `null`
      * and has a `typeof` result of "object".
      *
      * @static
@@ -28702,7 +28702,7 @@ return jQuery;
      * @since 4.0.0
      * @category Lang
      * @param {*} value The value to check.
-     * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+     * @returns {boolean} Returns `true` if `value` is object-likeController, else `false`.
      * @example
      *
      * _.isObjectLike({});
@@ -28773,7 +28773,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.isMatch` except that it accepts `customizer` which
+     * This method is likeController `_.isMatch` except that it accepts `customizer` which
      * is invoked to compare values. If `customizer` returns `undefined`, comparisons
      * are handled by the method instead. The `customizer` is invoked with five
      * arguments: (objValue, srcValue, index|key, object, source).
@@ -28852,7 +28852,7 @@ return jQuery;
      * Despite multiple requests, the core-js maintainer has made it clear: any
      * attempt to fix the detection will be obstructed. As a result, we're left
      * with little choice but to throw an error. Unfortunately, this also affects
-     * packages, like [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
+     * packages, likeController [babel-polyfill](https://www.npmjs.com/package/babel-polyfill),
      * which rely on core-js.
      *
      * @static
@@ -29350,7 +29350,7 @@ return jQuery;
 
     /**
      * Converts `value` to an integer suitable for use as the length of an
-     * array-like object.
+     * array-likeController object.
      *
      * **Note:** This method is based on
      * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
@@ -29553,7 +29553,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.assign` except that it iterates over own and
+     * This method is likeController `_.assign` except that it iterates over own and
      * inherited source properties.
      *
      * **Note:** This method mutates `object`.
@@ -29588,7 +29588,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.assignIn` except that it accepts `customizer`
+     * This method is likeController `_.assignIn` except that it accepts `customizer`
      * which is invoked to produce the assigned values. If `customizer` returns
      * `undefined`, assignment is handled by the method instead. The `customizer`
      * is invoked with five arguments: (objValue, srcValue, key, object, source).
@@ -29621,7 +29621,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.assign` except that it accepts `customizer`
+     * This method is likeController `_.assign` except that it accepts `customizer`
      * which is invoked to produce the assigned values. If `customizer` returns
      * `undefined`, assignment is handled by the method instead. The `customizer`
      * is invoked with five arguments: (objValue, srcValue, key, object, source).
@@ -29763,7 +29763,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.defaults` except that it recursively assigns
+     * This method is likeController `_.defaults` except that it recursively assigns
      * default properties.
      *
      * **Note:** This method mutates `object`.
@@ -29787,7 +29787,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.find` except that it returns the key of the first
+     * This method is likeController `_.find` except that it returns the key of the first
      * element `predicate` returns truthy for instead of the element itself.
      *
      * @static
@@ -29826,7 +29826,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.findKey` except that it iterates over elements of
+     * This method is likeController `_.findKey` except that it iterates over elements of
      * a collection in the opposite order.
      *
      * @static
@@ -29899,7 +29899,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.forIn` except that it iterates over properties of
+     * This method is likeController `_.forIn` except that it iterates over properties of
      * `object` in the opposite order.
      *
      * @static
@@ -29963,7 +29963,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.forOwn` except that it iterates over properties of
+     * This method is likeController `_.forOwn` except that it iterates over properties of
      * `object` in the opposite order.
      *
      * @static
@@ -30165,7 +30165,7 @@ return jQuery;
     }, constant(identity));
 
     /**
-     * This method is like `_.invert` except that the inverted object is generated
+     * This method is likeController `_.invert` except that the inverted object is generated
      * from the results of running each element of `object` thru `iteratee`. The
      * corresponding inverted value of each inverted key is an array of keys
      * responsible for generating the inverted value. The iteratee is invoked
@@ -30352,7 +30352,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.assign` except that it recursively merges own and
+     * This method is likeController `_.assign` except that it recursively merges own and
      * inherited enumerable string keyed properties of source objects into the
      * destination object. Source properties that resolve to `undefined` are
      * skipped if a destination value exists. Array and plain object properties
@@ -30387,7 +30387,7 @@ return jQuery;
     });
 
     /**
-     * This method is like `_.merge` except that it accepts `customizer` which
+     * This method is likeController `_.merge` except that it accepts `customizer` which
      * is invoked to produce the merged values of the destination and source
      * properties. If `customizer` returns `undefined`, merging is handled by the
      * method instead. The `customizer` is invoked with six arguments:
@@ -30540,7 +30540,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.get` except that if the resolved value is a
+     * This method is likeController `_.get` except that if the resolved value is a
      * function it's invoked with the `this` binding of its parent object and
      * its result is returned.
      *
@@ -30623,7 +30623,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.set` except that it accepts `customizer` which is
+     * This method is likeController `_.set` except that it accepts `customizer` which is
      * invoked to produce the objects of `path`.  If `customizer` returns `undefined`
      * path creation is handled by the method instead. The `customizer` is invoked
      * with three arguments: (nsValue, key, nsObject).
@@ -30788,7 +30788,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.set` except that accepts `updater` to produce the
+     * This method is likeController `_.set` except that accepts `updater` to produce the
      * value to set. Use `_.updateWith` to customize `path` creation. The `updater`
      * is invoked with one argument: (value).
      *
@@ -30819,7 +30819,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.update` except that it accepts `customizer` which is
+     * This method is likeController `_.update` except that it accepts `customizer` which is
      * invoked to produce the objects of `path`.  If `customizer` returns `undefined`
      * path creation is handled by the method instead. The `customizer` is invoked
      * with three arguments: (nsValue, key, nsObject).
@@ -31173,9 +31173,9 @@ return jQuery;
      * corresponding HTML entities.
      *
      * **Note:** No other characters are escaped. To escape additional
-     * characters use a third-party library like [_he_](https://mths.be/he).
+     * characters use a third-party library likeController [_he_](https://mths.be/he).
      *
-     * Though the ">" character is escaped for symmetry, characters like
+     * Though the ">" character is escaped for symmetry, characters likeController
      * ">" and "/" don't need escaping in HTML and have no special meaning
      * unless they're part of a tag or unquoted attribute value. See
      * [Mathias Bynens's article](https://mathiasbynens.be/notes/ambiguous-ampersands)
@@ -31412,7 +31412,7 @@ return jQuery;
      * @category String
      * @param {string} string The string to convert.
      * @param {number} [radix=10] The radix to interpret `value` by.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {number} Returns the converted integer.
      * @example
      *
@@ -31440,7 +31440,7 @@ return jQuery;
      * @category String
      * @param {string} [string=''] The string to repeat.
      * @param {number} [n=1] The number of times to repeat the string.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {string} Returns the repeated string.
      * @example
      *
@@ -31646,7 +31646,7 @@ return jQuery;
      *  The sourceURL of the compiled template.
      * @param {string} [options.variable='obj']
      *  The data object variable name.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Function} Returns the compiled template function.
      * @example
      *
@@ -31829,7 +31829,7 @@ return jQuery;
     }
 
     /**
-     * Converts `string`, as a whole, to lower case just like
+     * Converts `string`, as a whole, to lower case just likeController
      * [String#toLowerCase](https://mdn.io/toLowerCase).
      *
      * @static
@@ -31854,7 +31854,7 @@ return jQuery;
     }
 
     /**
-     * Converts `string`, as a whole, to upper case just like
+     * Converts `string`, as a whole, to upper case just likeController
      * [String#toUpperCase](https://mdn.io/toUpperCase).
      *
      * @static
@@ -31887,7 +31887,7 @@ return jQuery;
      * @category String
      * @param {string} [string=''] The string to trim.
      * @param {string} [chars=whitespace] The characters to trim.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {string} Returns the trimmed string.
      * @example
      *
@@ -31925,7 +31925,7 @@ return jQuery;
      * @category String
      * @param {string} [string=''] The string to trim.
      * @param {string} [chars=whitespace] The characters to trim.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {string} Returns the trimmed string.
      * @example
      *
@@ -31958,7 +31958,7 @@ return jQuery;
      * @category String
      * @param {string} [string=''] The string to trim.
      * @param {string} [chars=whitespace] The characters to trim.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {string} Returns the trimmed string.
      * @example
      *
@@ -32081,7 +32081,7 @@ return jQuery;
      * their corresponding characters.
      *
      * **Note:** No other HTML entities are unescaped. To unescape additional
-     * HTML entities use a third-party library like [_he_](https://mths.be/he).
+     * HTML entities use a third-party library likeController [_he_](https://mths.be/he).
      *
      * @static
      * @memberOf _
@@ -32153,7 +32153,7 @@ return jQuery;
      * @category String
      * @param {string} [string=''] The string to inspect.
      * @param {RegExp|string} [pattern] The pattern to match words.
-     * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+     * @param- {Object} [guard] Enables use as an iteratee for methods likeController `_.map`.
      * @returns {Array} Returns the words of `string`.
      * @example
      *
@@ -32392,7 +32392,7 @@ return jQuery;
     var flow = createFlow();
 
     /**
-     * This method is like `_.flow` except that it creates a function that
+     * This method is likeController `_.flow` except that it creates a function that
      * invokes the given functions from right to left.
      *
      * @static
@@ -32905,7 +32905,7 @@ return jQuery;
     var range = createRange();
 
     /**
-     * This method is like `_.range` except that it populates values in
+     * This method is likeController `_.range` except that it populates values in
      * descending order.
      *
      * @static
@@ -33231,7 +33231,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.max` except that it accepts `iteratee` which is
+     * This method is likeController `_.max` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the criterion by which
      * the value is ranked. The iteratee is invoked with one argument: (value).
      *
@@ -33278,7 +33278,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.mean` except that it accepts `iteratee` which is
+     * This method is likeController `_.mean` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the value to be averaged.
      * The iteratee is invoked with one argument: (value).
      *
@@ -33329,7 +33329,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.min` except that it accepts `iteratee` which is
+     * This method is likeController `_.min` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the criterion by which
      * the value is ranked. The iteratee is invoked with one argument: (value).
      *
@@ -33439,7 +33439,7 @@ return jQuery;
     }
 
     /**
-     * This method is like `_.sum` except that it accepts `iteratee` which is
+     * This method is likeController `_.sum` except that it accepts `iteratee` which is
      * invoked for each element in `array` to generate the value to be summed.
      * The iteratee is invoked with one argument: (value).
      *
@@ -34032,7 +34032,7 @@ return jQuery;
   // Export lodash.
   var _ = runInContext();
 
-  // Some AMD build optimizers, like r.js, check for condition patterns like:
+  // Some AMD build optimizers, likeController r.js, check for condition patterns likeController:
   if (true) {
     // Expose Lodash on the global object to prevent errors when Lodash is
     // loaded by a script tag in the presence of an AMD loader.
@@ -34480,7 +34480,7 @@ var _extends = Object.assign || function (target) {
  * @method
  * @memberof Popper.Utils
  * @argument {Object} offsets
- * @returns {Object} ClientRect like output
+ * @returns {Object} ClientRect likeController output
  */
 function getClientRect(offsets) {
   return _extends({}, offsets, {
@@ -35620,7 +35620,7 @@ function flip(data, options) {
   }
 
   if (data.flipped && data.placement === data.originalPlacement) {
-    // seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
+    // seems likeController flip is trying to loop, probably there's not enough space on any of the flippable sides
     return data;
   }
 
@@ -35918,7 +35918,7 @@ function preventOverflow(data, options) {
 
   // If offsetParent is the reference element, we really want to
   // go one step up and use the next offsetParent as reference to
-  // avoid to make this modifier completely useless and look like broken
+  // avoid to make this modifier completely useless and look likeController broken
   if (data.instance.reference === boundariesElement) {
     boundariesElement = getOffsetParent(boundariesElement);
   }
@@ -36589,7 +36589,7 @@ var Popper = function () {
   }
 
   // We can't use class properties because they don't get listed in the
-  // class prototype and break stuff like Sinon stubs
+  // class prototype and break stuff likeController Sinon stubs
 
 
   createClass(Popper, [{
@@ -37525,7 +37525,7 @@ var bind = Function.prototype.bind
   : polyfillBind;
 
 /**
- * Convert an Array-like object to a real Array.
+ * Convert an Array-likeController object to a real Array.
  */
 function toArray (list, start) {
   start = start || 0;
@@ -38441,7 +38441,7 @@ function del (target, key) {
 
 /**
  * Collect dependencies on array elements when the array is touched, since
- * we cannot intercept array element access like property getters.
+ * we cannot intercept array element access likeController property getters.
  */
 function dependArray (value) {
   for (var e = (void 0), i = 0, l = value.length; i < l; i++) {
@@ -40764,7 +40764,7 @@ function applyNS (vnode, ns, force) {
 }
 
 // ref #5318
-// necessary to ensure parent re-render when deep bindings like :style and
+// necessary to ensure parent re-render when deep bindings likeController :style and
 // :class are used on slot nodes
 function registerDeepBindings (data) {
   if (isObject(data.style)) {
@@ -45744,7 +45744,7 @@ var modules = platformModules.concat(baseModules);
 var patch = createPatchFunction({ nodeOps: nodeOps, modules: modules });
 
 /**
- * Not type checking this file because flow doesn't like attaching
+ * Not type checking this file because flow doesn't likeController attaching
  * properties to Elements.
  */
 
@@ -46587,7 +46587,7 @@ function parseHTML (html, options) {
   var last, lastTag;
   while (html) {
     last = html;
-    // Make sure we're not in a plaintext content element like script/style
+    // Make sure we're not in a plaintext content element likeController script/style
     if (!lastTag || !isPlainTextElement(lastTag)) {
       var textEnd = html.indexOf('<');
       if (textEnd === 0) {
@@ -47768,7 +47768,7 @@ function checkForAliasModel (el, value) {
         "<" + (el.tag) + " v-model=\"" + value + "\">: " +
         "You are binding v-model directly to a v-for iteration alias. " +
         "This will not be able to modify the v-for source array because " +
-        "writing to the alias is like modifying a function local variable. " +
+        "writing to the alias is likeController modifying a function local variable. " +
         "Consider using an array of objects and use v-model on an object property instead.",
         el.rawAttrsMap['v-model']
       );
@@ -48140,7 +48140,7 @@ function genHandler (handler) {
     if (keys.length) {
       code += genKeyFilter(keys);
     }
-    // Make sure modifiers like prevent and stop get executed after key filtering
+    // Make sure modifiers likeController prevent and stop get executed after key filtering
     if (genModifierCode) {
       code += genModifierCode;
     }
@@ -48349,7 +48349,7 @@ function genIfConditions (
     return ("" + (genTernaryExp(condition.block)))
   }
 
-  // v-if with v-once should generate code like (a)?_m(0):_m(1)
+  // v-if with v-once should generate code likeController (a)?_m(0):_m(1)
   function genTernaryExp (el) {
     return altGen
       ? altGen(el, state)
@@ -48758,7 +48758,7 @@ function transformSpecialNewlines (text) {
 
 
 
-// these keywords should not appear inside expressions, but operators like
+// these keywords should not appear inside expressions, but operators likeController
 // typeof, instanceof and in are allowed
 var prohibitedKeywordRE = new RegExp('\\b' + (
   'do,if,for,let,new,try,var,case,else,with,await,break,catch,class,const,' +
@@ -49447,7 +49447,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-  
+
 )
 
 /* hot reload */
@@ -49467,7 +49467,7 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 
