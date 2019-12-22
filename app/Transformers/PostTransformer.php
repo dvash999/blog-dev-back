@@ -18,7 +18,7 @@ class PostTransformer extends TransformerAbstract
             'author' =>  (string)$post->author,
             'title' => (string)$post->title,
             'content' => (string)$post->content,
-            'like' => (int)$post->likes,
+            'likeController' => (int)$post->likes,
             'comments' => (array((string)$post->comments)),
         ];
     }
