@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Transformers/PostTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/PostTransformer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/horizon.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/horizon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +238,10 @@
       <workItem from="1576347123943" duration="2707000" />
       <workItem from="1576780178019" duration="43000" />
       <workItem from="1576780249845" duration="964000" />
-      <workItem from="1577034457236" duration="3291000" />
+      <workItem from="1577034457236" duration="3691000" />
+      <workItem from="1577365945831" duration="992000" />
+      <workItem from="1577445520137" duration="1741000" />
+      <workItem from="1577636659840" duration="497000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -311,9 +310,9 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="1082" y="372" key="NewPhpFileDialog/49.23.1391.877@49.23.1391.877" timestamp="1576072415036" />
-    <state x="411" y="223" width="667" height="476" key="find.popup" timestamp="1576351490504">
+    <state x="411" y="223" width="667" height="476" key="find.popup" timestamp="1577451440970">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="411" y="223" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1576351490504" />
+    <state x="411" y="223" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1577451440970" />
   </component>
 </project>

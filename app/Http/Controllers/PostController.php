@@ -8,10 +8,9 @@ use App\Models\Post;
 
 class PostController extends ApiController
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::getAllPosts();
-
+        $posts = Post::getAllPosts($request->get('filter'));
         return $this->showAll($posts);
     }
 
