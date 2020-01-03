@@ -77,6 +77,5 @@ class PostController extends ApiController
     public function destroy(Post $post)
     {
        return $post->delete() ? response(['message' => Post::all()]) : response(['message' => false]);
-//      return $this->showOne($post);
     }
 }

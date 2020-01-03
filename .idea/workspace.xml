@@ -4,8 +4,8 @@
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/ApiResponder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/ApiResponder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +242,8 @@
       <workItem from="1577365945831" duration="992000" />
       <workItem from="1577445520137" duration="1741000" />
       <workItem from="1577636659840" duration="497000" />
+      <workItem from="1577734167799" duration="490000" />
+      <workItem from="1578064888500" duration="904000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -310,9 +312,9 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="1082" y="372" key="NewPhpFileDialog/49.23.1391.877@49.23.1391.877" timestamp="1576072415036" />
-    <state x="411" y="223" width="667" height="476" key="find.popup" timestamp="1577451440970">
+    <state x="411" y="223" width="667" height="476" key="find.popup" timestamp="1578067555695">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="411" y="223" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1577451440970" />
+    <state x="411" y="223" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1578067555695" />
   </component>
 </project>
