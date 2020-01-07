@@ -10,24 +10,24 @@ use Illuminate\Support\Facades\Validator;
 
 trait ApiResponder
 {
-    private function successResponse($data, $code)
+    private function successResponse($data, $status)
     {
-//        return 'ol';
-        return response()->json(['message' => $data, 'code' => $code], $code);
+        return response()->json(['message' => $data, 'status' => $status], $status);
     }
 
-    protected function errorResponse($message, $code)
+    protected function errorResponse($message, $status)
     {
-        return response()->json(['error' => $message, 'code' => $code], $code);
+        return response()->json(['error' => $message, 'status' => $status], $status);
     }
 
-    protected function showAll(Collection $collection, $code = 200)
+    protected function showAll(Collection $collection, $status = 200)
     {
         if ($collection->isEmpty()) {
-            return $this->successResponse($collection, $code);
+            return $this->successResponse($collection, $status);
         }
 
-        return $collection;
+        //Temp!
+        return response()->json(['message' => $collection, 'status' => $status]);
         $transformer = $collection->first()->transformer;
 
         $collection = $this->sortData($collection);
@@ -35,20 +35,20 @@ trait ApiResponder
         $collection = $this->transformData($collection, $transformer);
         $collection = $this->cacheResponse($collection);
 
-        return $this->successResponse($collection, $code);
+        return $this->successResponse($collection, $status);
     }
 
-    protected function showOne(Model $instance, $code = 200)
+    protected function showOne(Model $instance, $status = 200)
     {
         $transformer = $instance->transformer;
         $instance = $this->transformData($instance, $transformer);
 
-        return $this->successResponse($instance, $code);
+        return $this->successResponse($instance, $status);
     }
 
-    protected function showMessage($message, $code = 200)
+    protected function showMessage($message, $status = 200)
     {
-        return $this->successResponse($message, $code);
+        return $this->successResponse($message, $status);
     }
 
     protected function sortData(Collection $collection)

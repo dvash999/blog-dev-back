@@ -8,14 +8,18 @@ use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'author', 'content' ];
+    protected $fillable = ['title', 'author', 'content', 'type' ];
 
 
     public $transformer = PostTransformer::class;
 
-    public static function getAllPosts()
+    public static function getAllPosts($filter)
     {
-        return Post::all();
+        if ($filter) {
+            return DB::table('posts')->where('type', $filter)->get();
+        } else {
+            return DB::table('posts')->get();
+        }
     }
 
     public static function storePost($post)

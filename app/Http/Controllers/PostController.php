@@ -8,10 +8,9 @@ use App\Models\Post;
 
 class PostController extends ApiController
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::getAllPosts();
-
+        $posts = Post::getAllPosts($request->get('filter'));
         return $this->showAll($posts);
     }
 
@@ -21,6 +20,7 @@ class PostController extends ApiController
         $rules = [
             'author' => 'required',
             'title' => 'required',
+            'type' => 'required',
             'content' => 'required',
             'date' => 'date',
         ];
@@ -56,6 +56,7 @@ class PostController extends ApiController
         $rules = [
             'author' => 'required',
             'title' => 'required',
+            'type' => 'required',
             'content' => 'required',
             'date' => 'date',
         ];
@@ -78,6 +79,5 @@ class PostController extends ApiController
     public function destroy(Post $post)
     {
        return $post->delete() ? response(['message' => Post::all()]) : response(['message' => false]);
-//      return $this->showOne($post);
     }
 }
