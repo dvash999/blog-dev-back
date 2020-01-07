@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+//use Illuminate\Routing\Route;
 use app\Http\Controllers\PostController;
 
 /*
@@ -19,6 +20,7 @@ Route::resource('admin/users',      'UserController', ['except' => ['create', 'e
 Route::resource('posts',            'PostController', ['except' => ['create', 'edit']]);
 Route::resource('tech-news/posts',  'PostController', ['except' => ['create', 'edit']]);
 Route::resource('likes',            'LikeController', ['except' => ['create', 'edit']]);
+Route::post('email',                'EmailController@sendEmail');
 Route::get('likes/{type}/{typeID}', 'LikeController@getLikesByTypeAndId');
 
 Route::name('verify')->get('admin/users/verify/{token}', 'UserController@verify');

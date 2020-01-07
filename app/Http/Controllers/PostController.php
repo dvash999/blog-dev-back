@@ -20,6 +20,7 @@ class PostController extends ApiController
         $rules = [
             'author' => 'required',
             'title' => 'required',
+            'type' => 'required',
             'content' => 'required',
             'date' => 'date',
         ];
@@ -55,6 +56,7 @@ class PostController extends ApiController
         $rules = [
             'author' => 'required',
             'title' => 'required',
+            'type' => 'required',
             'content' => 'required',
             'date' => 'date',
         ];
