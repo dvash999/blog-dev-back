@@ -22,6 +22,7 @@ Route::resource('tech-news/posts',  'PostController', ['except' => ['create', 'e
 Route::resource('likes',            'LikeController', ['except' => ['create', 'edit']]);
 Route::post('email',                'EmailController@sendEmail');
 Route::get('likes/{type}/{typeID}', 'LikeController@getLikesByTypeAndId');
+Route::get('search/{query}',        'SearchController@searchPosts');;
 
 Route::name('verify')->get('admin/users/verify/{token}', 'UserController@verify');
 Route::name('resend')->get('admin/users/resend/{token}', 'UserController@resend');
