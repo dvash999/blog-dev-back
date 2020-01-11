@@ -18,6 +18,7 @@ class SearchController extends Controller
                 ->orWhere('author', 'LIKE', '%' . $query . '%')
                 ->orWhere('content', 'LIKE', '%' . $query . '%')
                 ->get();
+
         } catch (\Exception $e) {
             return $e;
         }

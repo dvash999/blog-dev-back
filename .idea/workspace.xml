@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminLoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +250,7 @@
       <workItem from="1578064888500" duration="1778000" />
       <workItem from="1578244425347" duration="1246000" />
       <workItem from="1578420803994" duration="5165000" />
-      <workItem from="1578653414227" duration="3169000" />
+      <workItem from="1578653414227" duration="7549000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -319,9 +323,17 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="1082" y="372" key="NewPhpFileDialog/49.23.1391.877@49.23.1391.877" timestamp="1576072415036" />
-    <state x="126" y="50" width="667" height="476" key="find.popup" timestamp="1578657093679">
+    <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578664899683">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="126" y="50" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1578657093679" />
+    <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.23.1391.877@49.23.1391.877" timestamp="1578664899683" />
+    <state x="126" y="50" width="667" height="476" key="find.popup" timestamp="1578761391374">
+      <screen x="49" y="23" width="1391" height="877" />
+    </state>
+    <state x="126" y="50" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1578761391374" />
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1578761416891">
+      <screen x="49" y="23" width="1391" height="877" />
+    </state>
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup/49.23.1391.877@49.23.1391.877" timestamp="1578761416891" />
   </component>
 </project>

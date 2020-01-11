@@ -17,6 +17,8 @@ use app\Http\Controllers\PostController;
 
 Route::resource('admin/posts',      'PostController', ['except' => ['create', 'edit']]);
 Route::resource('admin/users',      'UserController', ['except' => ['create', 'edit']]);
+Route::post('admin/login',          'AdminLoginController@Login');
+
 Route::resource('posts',            'PostController', ['except' => ['create', 'edit']]);
 Route::resource('tech-news/posts',  'PostController', ['except' => ['create', 'edit']]);
 Route::resource('likes',            'LikeController', ['except' => ['create', 'edit']]);
