@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helper;
 use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -28,13 +29,7 @@ class PostController extends ApiController
         $this->validate($request, $rules);
         $post = $request->all();
 
-        try {
-            Post::storePost($post);
-        } catch (\Exception $e) {
-            return $e;
-        }
-
-        return Response(['status' => 200, 'message' => 'success']);
+        Post::storePost($post) ?  Helper::success() : Helper::failed();
     }
 
     public function show(Post $post)
