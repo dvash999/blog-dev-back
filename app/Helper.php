@@ -22,12 +22,12 @@ class Helper
 
     public static function success($payload = null, $message = 'success')
     {
-        Response(['status' => 200, 'message' => $message, 'payload' => $payload]);
+        return response(['status' => 200, 'message' => $message, 'payload' => $payload]);
     }
 
     public static function failed($message = 'failed')
     {
-        Response(['status' => 401, 'message' => $message]);
+        return response(['status' => 401, 'message' => $message]);
     }
 
 

@@ -2,30 +2,48 @@
 
 namespace App\Models;
 
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class Admin extends Model
 {
 
     protected $fillable = ['email', 'password', 'token'];
 
-    public static function createAdmin(array $attributes = [])
+    public static function getAdmin($adminInfo)
     {
-        try {
-            $admin = new self();
-            $admin->fill($attributes);
-            $admin->save();
-            return $admin;
-        } catch (\Exception $e) {
-            DB::rollBack();
-        }
+        $email = $adminInfo->post('email');
+        $password = $adminInfo->post('password');
 
+        try {
+            $admin = DB::table('admins')->where('email', $email)->first();
+            if (Hash::check($password, $admin->password)) {
+                return $admin->token;
+            } else {
+                return 'Bad Credentials';
+            }
+        } catch (Exception $e) {
+            print_r($e);
+        }
     }
 
-    public static function getAdmin($email)
+    public static function authAdmin($token)
     {
-        return DB::table('admin')->where('email', $email)->get();
+        return DB::table('admins')->where('token', $token)->first();
+    }
+
+
+    public function createAdmin($adminInfo)
+    {
+        try {
+            $this->fill($adminInfo);
+            return $this->save();
+        } catch (Exception $e) {
+            print_r($e);
+        }
+
     }
 
 }

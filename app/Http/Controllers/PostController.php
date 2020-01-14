@@ -35,14 +35,7 @@ class PostController extends ApiController
     public function show(Post $post)
     {
         // TODO use validation for the ID in the request
-//        $this->showOne($post);
-
-        if ($post) {
-            return Response(['message' => $post, 'status' => 200, ]);
-        } else {
-            return Response(['message' => null, 'status' => 404]);
-        }
-//        return $this->showOne($post);
+        $post ?  Helper::success() : Helper::failed();
     }
 
 
