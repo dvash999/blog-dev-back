@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emailAnswer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emailAnswer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +255,7 @@
       <workItem from="1578958156051" duration="2245000" />
       <workItem from="1579026853473" duration="1303000" />
       <workItem from="1579028229594" duration="4480000" />
-      <workItem from="1579262294619" duration="1001000" />
+      <workItem from="1579262294619" duration="2591000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -353,10 +356,10 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.23.1391.877@49.23.1391.877" timestamp="1578664899683" />
-    <state x="126" y="49" width="667" height="476" key="find.popup" timestamp="1579027630139">
+    <state x="126" y="49" width="667" height="476" key="find.popup" timestamp="1579266530669">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="126" y="49" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1579027630139" />
+    <state x="126" y="49" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1579266530669" />
     <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1579030623361">
       <screen x="49" y="23" width="1391" height="877" />
     </state>

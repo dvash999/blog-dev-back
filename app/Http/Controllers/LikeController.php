@@ -35,19 +35,19 @@ class likeController extends Controller
         return response(['message' => 'success']);
     }
 
-
-    public static function getLikesByTypeAndId($type, $typeID)
-    {
-        $likes = 0;
-
-        try {
-            $likes = DB::table($type . 's')->where('id', $typeID)->value('likes');
-        } catch (\Exception $e) {
-            dd($e);
-        }
-
-        return $likes;
-    }
+//
+//    public static function getLikesByTypeAndId($type, $typeID)
+//    {
+//        $likes = 0;
+//
+//        try {
+//            $likes = DB::table('Like')->where('id', $typeID)->value('likes');
+//        } catch (\Exception $e) {
+//            dd($e);
+//        }
+//
+//        return $likes;
+//    }
 
 
     public function show($id)

@@ -29,13 +29,21 @@ class PostController extends ApiController
         $this->validate($request, $rules);
         $post = $request->all();
 
-        Post::storePost($post) ?  Helper::success() : Helper::failed();
+        if(Post::storePost($post)) {
+            return response(['status' => 200, 'payload' => 'success']);
+        } else {
+            return response(['status' => 401, 'payload' => 'failed']);
+        }
     }
 
     public function show(Post $post)
     {
-        // TODO use validation for the ID in the request
-        $post ?  Helper::success() : Helper::failed();
+        return $post;
+//        if($post) {
+//            return response(['status' => 200, 'payload' => 'success']);
+//        } else {
+//            return response(['status' => 401, 'payload' => 'failed']);
+//        }
     }
 
 
