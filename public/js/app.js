@@ -1968,7 +1968,7 @@ __webpack_require__.r(__webpack_exports__);
    */
   /**
    * ------------------------------------------------------------------------
-   * Private TransitionEnd Helpers
+   * Private TransitionEnd Helper
    * ------------------------------------------------------------------------
    */
 
