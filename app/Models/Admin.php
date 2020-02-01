@@ -22,7 +22,7 @@ class Admin extends Model
             if (Hash::check($password, $admin->password)) {
                 return $admin->token;
             } else {
-                return 'Bad Credentials';
+                return false;
             }
         } catch (Exception $e) {
             print_r($e);
@@ -37,12 +37,12 @@ class Admin extends Model
 
     public function createAdmin($adminInfo)
     {
-        try {
-            $this->fill($adminInfo);
-            return $this->save();
-        } catch (Exception $e) {
-            print_r($e);
-        }
+//        try {
+//            $this->fill($adminInfo);
+//            return $this->save();
+//        } catch (Exception $e) {
+//            print_r($e);
+//        }
 
     }
 

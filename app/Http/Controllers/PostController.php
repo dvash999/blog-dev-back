@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\Helper;
-use function GuzzleHttp\Psr7\get_message_body_summary;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Http\UploadedFile;
 
 class PostController extends ApiController
 {
@@ -18,32 +18,42 @@ class PostController extends ApiController
 
     public function store(Request $request)
     {
-        $rules = [
-            'author' => 'required',
-            'title' => 'required',
-            'type' => 'required',
-            'content' => 'required',
-            'date' => 'date',
-        ];
+//        $rules = [
+//            'author' => 'required',
+//            'title' => 'required',
+//            'type' => 'required',
+//            'content' => 'required',
+//            'date' => 'date',
+//            'img' => 'required'
+//        ];
 
-        $this->validate($request, $rules);
+//        $this->validate($request, $rules);
         $post = $request->all();
+        dd($post);
+        dd($request->hasFile('img'));
 
         if(Post::storePost($post)) {
-            return response(['status' => 200, 'payload' => 'success']);
+            return response(['status' => 200, 'message' => 'success']);
         } else {
-            return response(['status' => 401, 'payload' => 'failed']);
+            return response(['status' => 401, 'message' => 'failed']);
         }
     }
 
     public function show(Post $post)
     {
-        return $post;
-//        if($post) {
-//            return response(['status' => 200, 'payload' => 'success']);
-//        } else {
-//            return response(['status' => 401, 'payload' => 'failed']);
-//        }
+        if($post) {
+            $post->date = self::transformDate($post->value('date'));
+
+            return response(['status' => 200, 'message' => 'success', 'payload' => $post]);
+        } else {
+            return response(['status' => 401, 'message' => 'failed', 'payload' => $post]);
+        }
+    }
+
+    public function transformDate($data)
+    {
+    $dateArr = explode('-', $data);
+    return "{$dateArr[2]}.{$dateArr[2]}.{$dateArr[0]}";
     }
 
 

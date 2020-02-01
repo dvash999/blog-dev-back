@@ -21,18 +21,19 @@ class likeController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function addLike(Request $request)
     {
         $type = $request->post('type');
-        $id = $request->post('typeID');
+        $id = $request->post('id');
 
         try {
-            DB::table($type . 's')->where('id', $id)->increment('likes', 1);
+            DB::table($type.'s')->where('id', $id)->increment('likes', 1);
+            return response(['message' => 'success']);
         } catch (\Exception $e) {
-            dd($e);
+            return response(['message' => 'failed']);
         }
 
-        return response(['message' => 'success']);
+
     }
 
 //

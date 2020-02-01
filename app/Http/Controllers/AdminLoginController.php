@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
 class AdminLoginController extends Controller
@@ -35,10 +36,15 @@ class AdminLoginController extends Controller
             'password' => 'required|min:6'
         ];
 
-        $this->validate($request, $rules);
+        $validated = Validator::make($request->all(), $rules);
+
+        if($validated->fails())
+        {
+            return response(['status' => 422, 'message' => 'incorrect credentials', 'payload' => $validated->errors()]);
+        }
 
         if ($token = Admin::getAdmin($request)) {
-            return response(['status' => 200, 'message' => $token]);
+            return response(['status' => 200, 'message' => 'success', 'payload' => $token]);
         } else {
             return response(['status' => 401, 'message' => 'failed']);
         }
@@ -47,9 +53,9 @@ class AdminLoginController extends Controller
     public function authAdmin(Request $request)
     {
         if (Admin::authAdmin($request->post('token'))) {
-            return response(['status' => 200, 'message' => true]);
+            return response(['status' => 200, 'message' => 'success', 'payload' => true]);
         } else {
-            return response(['status' => 401, 'message' => false]);
+            return response(['status' => 401, 'message' => 'failed', 'payload' => false]);
         }
     }
 }
