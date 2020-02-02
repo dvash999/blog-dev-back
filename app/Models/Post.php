@@ -22,9 +22,10 @@ class Post extends Model
         }
     }
 
-    public static function storePost($post)
+    public static function storePost($post, $imgName)
     {
         $post = new self($post);
+        $post->img_title = $imgName;
         $post->save();
     }
 

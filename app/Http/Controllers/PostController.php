@@ -6,6 +6,7 @@ use App\Helpers\Helper;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends ApiController
 {
@@ -18,21 +19,32 @@ class PostController extends ApiController
 
     public function store(Request $request)
     {
-//        $rules = [
-//            'author' => 'required',
-//            'title' => 'required',
-//            'type' => 'required',
-//            'content' => 'required',
-//            'date' => 'date',
-//            'img' => 'required'
-//        ];
-
-//        $this->validate($request, $rules);
+        $rules = [
+            'author' => 'required',
+            'title' => 'required',
+            'type' => 'required',
+            'content' => 'required',
+            'date' => 'date',
+//            'image' => 'required | mimes:jpeg,jpg,png | max:1000',
+        ];
+//        json_decode($request->json()->all());
+        dd($request->json()->post());
+        $this->validate($request, $rules);
+        $file = $request->file('img');
         $post = $request->all();
-        dd($post);
-        dd($request->hasFile('img'));
 
-        if(Post::storePost($post)) {
+        if(!$file) {
+            return response(['status' => 400, 'message' => 'failed', 'payload' => 'img error']);
+        }
+
+        $isSaved = DB::transaction(function () use ($post, $file) {
+            $imgName = $file->getClientOriginalName();
+            $file->move('img', $imgName);
+            Post::storePost($post, $imgName);
+            return true;
+        });
+
+        if($isSaved) {
             return response(['status' => 200, 'message' => 'success']);
         } else {
             return response(['status' => 401, 'message' => 'failed']);
