@@ -12,7 +12,7 @@ class clearData extends Command
      *
      * @var string
      */
-    protected $signature = 'DB:clearData';
+    protected $signature = 'db:reset';
 
     /**
      * The console command description.

@@ -12,7 +12,7 @@ class clearApp extends Command
      *
      * @var string
      */
-    protected $signature = 'DB:clearApp';
+    protected $signature = 'app:reset';
 
     /**
      * The console command description.

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends ApiController
 {
@@ -20,18 +22,19 @@ class PostController extends ApiController
     public function store(Request $request)
     {
         $rules = [
-            'author' => 'required',
-            'title' => 'required',
-            'type' => 'required',
-            'content' => 'required',
-            'date' => 'date',
-//            'image' => 'required | mimes:jpeg,jpg,png | max:1000',
+            'post' => [
+                'author' => 'string|required|max:20',
+                'title' => 'string|required|max:50',
+                'type' => 'required|News|Deep-Dive',
+                'content' => 'string|required|max:3000',
+            ],
+            'img' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
+
         ];
-//        json_decode($request->json()->all());
-        dd($request->json()->post());
+
+        $post = json_decode($request->post('data'),true);
         $this->validate($request, $rules);
         $file = $request->file('img');
-        $post = $request->all();
 
         if(!$file) {
             return response(['status' => 400, 'message' => 'failed', 'payload' => 'img error']);
@@ -55,6 +58,13 @@ class PostController extends ApiController
     {
         if($post) {
             $post->date = self::transformDate($post->value('date'));
+            $images = File::files(public_path().'/img');
+            foreach($images as $image) {
+                if($image->getFileName() === $post->img_title) {
+                    $img = base64_encode($image);
+                }
+            }
+            $post->img = $img;
 
             return response(['status' => 200, 'message' => 'success', 'payload' => $post]);
         } else {

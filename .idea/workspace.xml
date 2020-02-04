@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/mountain.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/039c9051-bb30-e111-80fc-0025902c7e73_1_full.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/clearApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/clearApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/clearData.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/clearData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +260,7 @@
       <workItem from="1579275846986" duration="5810000" />
       <workItem from="1579461076376" duration="676000" />
       <workItem from="1579623204379" duration="467000" />
-      <workItem from="1580485659335" duration="7570000" />
+      <workItem from="1580485659335" duration="15273000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -361,14 +361,14 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.23.1391.877@49.23.1391.877" timestamp="1580670043078" />
-    <state x="126" y="49" width="667" height="476" key="find.popup" timestamp="1580662164732">
+    <state x="126" y="49" width="667" height="476" key="find.popup" timestamp="1580761095991">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="126" y="49" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1580662164732" />
-    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1580573328499">
+    <state x="126" y="49" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1580761095991" />
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1580761118918">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup/49.23.1391.877@49.23.1391.877" timestamp="1580573328499" />
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup/49.23.1391.877@49.23.1391.877" timestamp="1580761118918" />
     <state x="474" y="370" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579265768136">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
