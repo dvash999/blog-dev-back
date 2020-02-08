@@ -13,11 +13,18 @@ class SearchController extends Controller
     {
         try {
             // TODO - add validation to $query;
-            return DB::table('posts')
+            $posts = DB::table('posts')
                 ->where('title', 'LIKE', '%' . $query . '%')
                 ->orWhere('author', 'LIKE', '%' . $query . '%')
                 ->orWhere('content', 'LIKE', '%' . $query . '%')
                 ->get();
+
+            foreach ($posts as $post) {
+                $postC = new PostController();
+                $post->img = $postC->getAndTransformImage($post->img_title);
+            }
+
+            return $posts;
 
         } catch (\Exception $e) {
             return $e;

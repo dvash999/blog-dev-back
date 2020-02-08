@@ -18,6 +18,7 @@ use app\Http\Controllers\PostController;
 */
 
 Route::resource('admin/posts',                              'PostController', ['except' => ['create', 'edit']]);
+Route::post('admin/posts/{postId}/updatePost',               'PostController@update');
 Route::resource('admin/users',                              'UserController', ['except' => ['create', 'edit']]);
 Route::post('admin/login',                                  'AdminLoginController@login');
 Route::post('admin/createAdmin',                            'AdminLoginController@createAdmin');

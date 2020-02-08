@@ -2,74 +2,93 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Helper;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\ValidationException;
+use mysql_xdevapi\Exception;
+
 
 class PostController extends ApiController
 {
     public function index(Request $request)
     {
         $posts = Post::getAllPosts($request->get('filter'));
+        foreach ($posts as $post) {
+            $post->img = self::getAndTransformImage($post->img_title);
+        }
         return $this->showAll($posts);
-    }
-
-
-    public function store(Request $request)
-    {
-        $rules = [
-            'post' => [
-                'author' => 'string|required|max:20',
-                'title' => 'string|required|max:50',
-                'type' => 'required|News|Deep-Dive',
-                'content' => 'string|required|max:3000',
-            ],
-            'img' => 'mimes:jpeg,jpg,png,gif|required|max:10000'
-
-        ];
-
-        $post = json_decode($request->post('data'),true);
-        $this->validate($request, $rules);
-        $file = $request->file('img');
-
-        if(!$file) {
-            return response(['status' => 400, 'message' => 'failed', 'payload' => 'img error']);
-        }
-
-        $isSaved = DB::transaction(function () use ($post, $file) {
-            $imgName = $file->getClientOriginalName();
-            $file->move('img', $imgName);
-            Post::storePost($post, $imgName);
-            return true;
-        });
-
-        if($isSaved) {
-            return response(['status' => 200, 'message' => 'success']);
-        } else {
-            return response(['status' => 401, 'message' => 'failed']);
-        }
     }
 
     public function show(Post $post)
     {
         if($post) {
             $post->date = self::transformDate($post->value('date'));
-            $images = File::files(public_path().'/img');
-            foreach($images as $image) {
-                if($image->getFileName() === $post->img_title) {
-                    $img = base64_encode($image);
-                }
-            }
-            $post->img = $img;
-
+            $post->img = self::getAndTransformImage($post->img_title);
             return response(['status' => 200, 'message' => 'success', 'payload' => $post]);
         } else {
             return response(['status' => 401, 'message' => 'failed', 'payload' => $post]);
         }
+    }
+
+    public function getAndTransformImage($imgTitle)
+    {
+        $images = File::files(public_path().'/img');
+        foreach($images as $image) {
+            if($image->getFileName() === $imgTitle) {
+                return base64_encode(file_get_contents($image));
+            }
+        }
+    }
+
+
+    public function getImageFromRequest($request)
+    {
+        return $request->file('img');
+    }
+
+    public function processPostContent($request)
+    {
+        return json_decode($request->post('data'),true);
+    }
+
+    public function store(Request $request)
+    {
+        $post = self::processPost($request);
+        self::validatePost($post);
+        try {
+            Post::storePost($post);
+            return response(['status' => 200, 'message' => 'success']);
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response(['status' => 401, 'message' => 'failed']);
+
+        }
+    }
+
+    public function processPost($request)
+    {
+        $post = self::processPostContent($request);
+        $img = self::getImageFromRequest($request);
+        return ['data' => $post, 'img' => $img];
+    }
+
+    public function validatePost($post)
+    {
+        // TODO - define deep-dive && news
+        $rules = [
+                'data.title' => ['string','required','max:100'],
+                'data.author' => ['string','required','max:50'],
+                'data.type' => ['string', 'required'],
+                'data.content' => ['string','required','max:3000'],
+
+            'img' => ['required', 'mimes:jpg,jpeg,png,bmp', 'max:20000']
+        ];
+
+        Validator::make($post, $rules)->validate();
+
     }
 
     public function transformDate($data)
@@ -78,34 +97,25 @@ class PostController extends ApiController
     return "{$dateArr[2]}.{$dateArr[2]}.{$dateArr[0]}";
     }
 
-
-    public function update(Request $request, Post $post)
+    public function update(Request $request, $postId)
     {
-        $rules = [
-            'author' => 'required',
-            'title' => 'required',
-            'type' => 'required',
-            'content' => 'required',
-            'date' => 'date',
-        ];
+        $post = self::processPost($request);
+        self::validatePost($post);
+        try {
+            Post::deletePost($postId);
+            Post::storePost($post);
+            return response(['message' => 'success'], 200);
 
-        $this->validate($request, $rules);
-        $newPostData = $request->post();
+        } catch (\Exception $e) {
+            DB::rollback();
+            return response(['status' => 401, 'message' => 'failed']);
 
-        foreach($newPostData as $key => $value) {
-            if (!$value) {
-                $this->errorResponse('cant accept empty values', 401);
-            }
-            $post[$key] = $value;
         }
-
-        $post->save();
-
-        return $this->showOne($post);
     }
 
-    public function destroy(Post $post)
+    public function destroy($post)
     {
-       return $post->delete() ? response(['message' => Post::all()]) : response(['message' => false]);
+        Post::deletePost($post);
+        return response(['message' => 'success', 'payload' => Post::all()], 200);
     }
 }
