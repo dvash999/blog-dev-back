@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,8 +168,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Models" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Traits" />
       <recent name="$PROJECT_DIR$/app/Http/Requests" />
     </key>
@@ -257,7 +262,10 @@
       <workItem from="1579461076376" duration="676000" />
       <workItem from="1579623204379" duration="467000" />
       <workItem from="1580485659335" duration="15979000" />
-      <workItem from="1581076807412" duration="19159000" />
+      <workItem from="1581076807412" duration="19183000" />
+      <workItem from="1581674025613" duration="1138000" />
+      <workItem from="1581692051834" duration="984000" />
+      <workItem from="1582054125960" duration="4467000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -290,10 +298,10 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="432" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/49.23.1391.877@49.23.1391.877" timestamp="1576780199658" />
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578946121604">
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582142560408">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/49.23.1391.877@49.23.1391.877" timestamp="1578946121604" />
+    <state x="488" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/49.23.1391.877@49.23.1391.877" timestamp="1582142560408" />
     <state x="159" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579030982491">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
@@ -362,14 +370,14 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.23.1391.877@49.23.1391.877" timestamp="1581105893662" />
-    <state x="694" y="154" width="667" height="476" key="find.popup" timestamp="1581191933132">
+    <state x="694" y="154" width="667" height="730" key="find.popup" timestamp="1582145253920">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="694" y="154" width="667" height="476" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1581191933132" />
-    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1581191241084">
+    <state x="694" y="154" width="667" height="730" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1582145253920" />
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1582142591693">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup/49.23.1391.877@49.23.1391.877" timestamp="1581191241084" />
+    <state x="491" y="224" width="670" height="676" key="search.everywhere.popup/49.23.1391.877@49.23.1391.877" timestamp="1582142591693" />
     <state x="474" y="370" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579265768136">
       <screen x="49" y="23" width="1391" height="877" />
     </state>

@@ -12,7 +12,6 @@ class UserController extends ApiController
     public function index()
     {
          return User::all();
-//        return $this->showAll();
     }
 
     public function create()

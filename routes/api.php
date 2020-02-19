@@ -24,6 +24,11 @@ Route::post('admin/login',                                  'AdminLoginControlle
 Route::post('admin/createAdmin',                            'AdminLoginController@createAdmin');
 Route::post('admin/auth',                                   'AdminLoginController@authAdmin');
 
+Route::get('admin/tasks/getTasks',                          'TaskController@getTasks');
+Route::post('admin/tasks/add',                              'TaskController@addTask');
+Route::delete('admin/tasks/delete/{taskId}',                'TaskController@deleteTask');
+
+
 
 Route::resource('posts',                                    'PostController', ['except' => ['create', 'edit']]);
 Route::resource('tech-news/posts',                          'PostController', ['except' => ['create', 'edit']]);
