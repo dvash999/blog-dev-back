@@ -21,19 +21,38 @@ class TaskController extends Controller
 
         $this->validate($request, $rules);
 
-        $task = $request->post('task');
-        dd(Task::addTask($task));
-        if(Task::addTask($task)) {
-            response(['message' => 'success']);
+        $content = $request->post('task');
+        if($task = Task::addTask($content)) {
+            return response(['message' => 'success', 'payload' => $task]);
         } else {
-            response(['message' => 'failed']);
+            return response(['message' => 'failed']);
         }
 
     }
 
-    public function delete()
+    public function editTask(Request $request, $taskId)
     {
-        dd();
+        $rules = [
+            'content' => 'required|string|max:250',
+        ];
+
+        $this->validate($request, $rules);
+
+        $isSaved = Task::editTask($taskId, $request->post());
+        if($isSaved) {
+            return response(['message' => 'success']);
+        } else {
+            return response(['message' => 'failed']);
+        }
+    }
+
+    public function deleteTask(Task $task)
+    {
+        if(Task::destroy($task->id)) {
+            return response(['message' => 'success']);
+        } else {
+            return response(['message' => 'failed']);
+        };
     }
 
 

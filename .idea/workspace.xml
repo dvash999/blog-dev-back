@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +263,8 @@
       <workItem from="1581076807412" duration="19183000" />
       <workItem from="1581674025613" duration="1138000" />
       <workItem from="1581692051834" duration="984000" />
-      <workItem from="1582054125960" duration="4467000" />
+      <workItem from="1582054125960" duration="4683000" />
+      <workItem from="1582397586804" duration="4818000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
@@ -370,10 +369,10 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="149" y="123" width="1191" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/49.23.1391.877@49.23.1391.877" timestamp="1581105893662" />
-    <state x="694" y="154" width="667" height="730" key="find.popup" timestamp="1582145253920">
+    <state x="773" y="142" width="667" height="730" key="find.popup" timestamp="1582404526742">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="694" y="154" width="667" height="730" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1582145253920" />
+    <state x="773" y="142" width="667" height="730" key="find.popup/49.23.1391.877@49.23.1391.877" timestamp="1582404526742" />
     <state x="491" y="224" width="670" height="676" key="search.everywhere.popup" timestamp="1582142591693">
       <screen x="49" y="23" width="1391" height="877" />
     </state>

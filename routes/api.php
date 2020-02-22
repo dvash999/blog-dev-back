@@ -26,7 +26,8 @@ Route::post('admin/auth',                                   'AdminLoginControlle
 
 Route::get('admin/tasks/getTasks',                          'TaskController@getTasks');
 Route::post('admin/tasks/add',                              'TaskController@addTask');
-Route::delete('admin/tasks/delete/{taskId}',                'TaskController@deleteTask');
+Route::put('admin/tasks/edit/{task}',                       'TaskController@editTask');
+Route::delete('admin/tasks/delete/{task}',                'TaskController@deleteTask');
 
 
 
