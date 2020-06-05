@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b931c221-3ee3-4289-8550-0f6df71881f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +261,9 @@
       <workItem from="1581674025613" duration="1138000" />
       <workItem from="1581692051834" duration="984000" />
       <workItem from="1582054125960" duration="4683000" />
-      <workItem from="1582397586804" duration="4818000" />
+      <workItem from="1582397586804" duration="4853000" />
+      <workItem from="1582476808078" duration="248000" />
+      <workItem from="1583266081923" duration="7000" />
     </task>
     <option name="searchClosedTasks" value="true" />
     <servers />
